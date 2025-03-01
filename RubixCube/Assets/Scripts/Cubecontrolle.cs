@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RubixController : MonoBehaviour
+public class Cubecontrolle : MonoBehaviour
 {
     public List<GameObject> rotating;
     public List<GameObject> everything;
@@ -156,10 +156,10 @@ public class RubixController : MonoBehaviour
                 break;
         }
     }
-    
+
     public void checkcollision(GameObject cr)
     {
-        Collider[] cols = Physics.OverlapBox(cr.transform.position, cr.transform.localScale ,cr.transform.rotation);
+        Collider[] cols = Physics.OverlapBox(cr.transform.position, cr.transform.localScale, cr.transform.rotation);
         foreach (var col in cols)
         {
             rotating.Add(col.gameObject);
