@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 4518884}
   - component: {fileID: 4518883}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: ???
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -548,7 +548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 978473278389850530, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_Name
-      value: X (1)
+      value: Orange X Center
       objectReference: {fileID: 0}
     - target: {fileID: 4723048127840987860, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_Color.b
@@ -936,7 +936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 978473278389850530, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_Name
-      value: X (4)
+      value: Yellow X Center
       objectReference: {fileID: 0}
     - target: {fileID: 4723048127840987860, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_Color.b
@@ -1093,7 +1093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5522756872577177764, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Name
-      value: T (1)
+      value: Red T Middle Right
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1341,7 +1341,7 @@ GameObject:
   - component: {fileID: 175479144}
   - component: {fileID: 175479143}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Green Middle Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1509,7 +1509,7 @@ GameObject:
   - component: {fileID: 194612863}
   - component: {fileID: 194612862}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: ??
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2104,7 +2104,7 @@ GameObject:
   - component: {fileID: 259442994}
   - component: {fileID: 259442993}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: '?'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2424,7 +2424,7 @@ GameObject:
   - component: {fileID: 316633175}
   - component: {fileID: 316633174}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: Yellow Bottom Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3331,7 +3331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 978473278389850530, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_Name
-      value: X (5)
+      value: Blue X Center
       objectReference: {fileID: 0}
     - target: {fileID: 4723048127840987860, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_Color.b
@@ -3448,7 +3448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4749501216999754262, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_Name
-      value: L (2)
+      value: Blue L Middle Left
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.x
@@ -3617,7 +3617,7 @@ GameObject:
   - component: {fileID: 483073366}
   - component: {fileID: 483073365}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: Yellow Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3706,7 +3706,7 @@ GameObject:
   - component: {fileID: 512172271}
   - component: {fileID: 512172270}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: WHITE CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3890,7 +3890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4741454124259517854, guid: 4f5f49050afe6da4180f8c50a89db6e5, type: 3}
       propertyPath: m_Name
-      value: l 1 (1)
+      value: Blue | Middle Top
       objectReference: {fileID: 0}
     - target: {fileID: 5797771747970211796, guid: 4f5f49050afe6da4180f8c50a89db6e5, type: 3}
       propertyPath: m_Color.b
@@ -4062,7 +4062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4749501216999754262, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_Name
-      value: L (7)
+      value: Yellow L Bottom Middle
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.x
@@ -4409,7 +4409,7 @@ GameObject:
   - component: {fileID: 612566761}
   - component: {fileID: 612566760}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Blue Middle Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4817,7 +4817,7 @@ GameObject:
   - component: {fileID: 688653298}
   - component: {fileID: 688653297}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Blue Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4995,7 +4995,7 @@ GameObject:
   - component: {fileID: 706408460}
   - component: {fileID: 706408459}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: ORANGE CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5331,7 +5331,7 @@ GameObject:
   - component: {fileID: 763296397}
   - component: {fileID: 763296396}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: YG CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6057,7 +6057,7 @@ GameObject:
   - component: {fileID: 847681396}
   - component: {fileID: 847681395}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Green Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7398,7 +7398,7 @@ GameObject:
   - component: {fileID: 1066278879}
   - component: {fileID: 1066278878}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: White Middle Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7544,7 +7544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4741454124259517854, guid: 4f5f49050afe6da4180f8c50a89db6e5, type: 3}
       propertyPath: m_Name
-      value: l 1 (7)
+      value: Yellow | Middle Left
       objectReference: {fileID: 0}
     - target: {fileID: 5797771747970211796, guid: 4f5f49050afe6da4180f8c50a89db6e5, type: 3}
       propertyPath: m_Color.b
@@ -7857,7 +7857,7 @@ GameObject:
   - component: {fileID: 1152882467}
   - component: {fileID: 1152882466}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: Yellow Middle Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8022,7 +8022,7 @@ GameObject:
   - component: {fileID: 1172026399}
   - component: {fileID: 1172026398}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: BR CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8138,7 +8138,7 @@ GameObject:
   - component: {fileID: 1174645058}
   - component: {fileID: 1174645057}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Blue Middle Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8533,7 +8533,7 @@ GameObject:
   - component: {fileID: 1240619629}
   - component: {fileID: 1240619628}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: White Bottom Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8856,7 +8856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5522756872577177764, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Name
-      value: T (1)
+      value: White T Bottom Middle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9017,7 +9017,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4749501216999754262, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_Name
-      value: L (5)
+      value: Yellow L Middle Top
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.x
@@ -9222,7 +9222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5522756872577177764, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Name
-      value: T (3)
+      value: Blue T Middle Bottom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9241,7 +9241,7 @@ GameObject:
   - component: {fileID: 1324094931}
   - component: {fileID: 1324094930}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Blue Middle Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9638,7 +9638,7 @@ GameObject:
   - component: {fileID: 1373123591}
   - component: {fileID: 1373123590}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Green Bottom Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10047,7 +10047,7 @@ GameObject:
   - component: {fileID: 1387413209}
   - component: {fileID: 1387413208}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: RED CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10130,7 +10130,7 @@ GameObject:
   - component: {fileID: 1409879607}
   - component: {fileID: 1409879606}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Red Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10342,7 +10342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 978473278389850530, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_Name
-      value: X (2)
+      value: Red X Center
       objectReference: {fileID: 0}
     - target: {fileID: 4723048127840987860, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_Color.b
@@ -10543,7 +10543,7 @@ GameObject:
   - component: {fileID: 1439060541}
   - component: {fileID: 1439060540}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GREEN CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11050,7 +11050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5522756872577177764, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Name
-      value: T
+      value: White T Middle Top
       objectReference: {fileID: 0}
     - target: {fileID: 8151122329544756798, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Color.b
@@ -11270,7 +11270,7 @@ GameObject:
   - component: {fileID: 1524795244}
   - component: {fileID: 1524795243}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: White Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11410,7 +11410,7 @@ GameObject:
   - component: {fileID: 1573656387}
   - component: {fileID: 1573656386}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: Yellow Middle Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11549,7 +11549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4741454124259517854, guid: 4f5f49050afe6da4180f8c50a89db6e5, type: 3}
       propertyPath: m_Name
-      value: l 1
+      value: Green | Bottom Middle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11857,7 +11857,7 @@ GameObject:
   - component: {fileID: 1673567473}
   - component: {fileID: 1673567472}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Orange Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11964,11 +11964,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 889387297}
-  - {fileID: 673276474}
   - {fileID: 368915748}
+  - {fileID: 1986943208}
+  - {fileID: 673276474}
   - {fileID: 1077734401}
   - {fileID: 765583326}
-  - {fileID: 1986943208}
   - {fileID: 526341284}
   m_Father: {fileID: 315000923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12145,7 +12145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5522756872577177764, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Name
-      value: T
+      value: Green T Middle Top
       objectReference: {fileID: 0}
     - target: {fileID: 8151122329544756798, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Color.b
@@ -12349,7 +12349,7 @@ GameObject:
   - component: {fileID: 1738213476}
   - component: {fileID: 1738213475}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: BLUE CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12501,7 +12501,7 @@ GameObject:
   - component: {fileID: 1741975565}
   - component: {fileID: 1741975564}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Red Middle Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12834,7 +12834,7 @@ GameObject:
   - component: {fileID: 1805345172}
   - component: {fileID: 1805345171}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GW CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13338,7 +13338,7 @@ GameObject:
   - component: {fileID: 1888447294}
   - component: {fileID: 1888447293}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: YB CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14325,7 +14325,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 978473278389850530, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_Name
-      value: X (3)
+      value: White X Center
       objectReference: {fileID: 0}
     - target: {fileID: 8562546515132424154, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_LocalScale.x
@@ -14536,7 +14536,7 @@ GameObject:
   - component: {fileID: 2065240467}
   - component: {fileID: 2065240466}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: YELLOW CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14744,7 +14744,7 @@ GameObject:
   - component: {fileID: 2102278755}
   - component: {fileID: 2102278754}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: BW CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15079,7 +15079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 978473278389850530, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_Name
-      value: X
+      value: Green X Center
       objectReference: {fileID: 0}
     - target: {fileID: 4723048127840987860, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_Color.b
