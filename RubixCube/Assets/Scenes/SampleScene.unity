@@ -150,11 +150,11 @@ Transform:
   m_GameObject: {fileID: 4518880}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 4.59, z: -4.589999}
-  m_LocalScale: {x: 1, y: 9, z: 9}
+  m_LocalPosition: {x: -20, y: 45.4, z: -65.98}
+  m_LocalScale: {x: 2, y: 18, z: 18}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 532903180}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!23 &4518883
 MeshRenderer:
@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 33127370}
   - component: {fileID: 33127369}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: RYG CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 47157993}
   - component: {fileID: 47157992}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Green Middle Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 69700674}
   - component: {fileID: 69700675}
   m_Layer: 0
-  m_Name: gwo
+  m_Name: Orange-Green-White-Corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -439,15 +439,15 @@ Transform:
   m_GameObject: {fileID: 69700673}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.00000013411044, w: 1}
-  m_LocalPosition: {x: 9.969979, y: 5.410019, z: -24.900002}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 19.939959, y: 11.220039, z: -16.800003}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1842175415}
   - {fileID: 1429243606}
   - {fileID: 1294499368}
   - {fileID: 856594970}
-  m_Father: {fileID: 315000923}
+  m_Father: {fileID: 1286469158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &69700675
 BoxCollider:
@@ -481,7 +481,7 @@ GameObject:
   - component: {fileID: 84675272}
   - component: {fileID: 84675273}
   m_Layer: 0
-  m_Name: yr
+  m_Name: Red-Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -655,7 +655,7 @@ GameObject:
   - component: {fileID: 111678850}
   - component: {fileID: 111678849}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Green Middle Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -737,7 +737,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4749501216999754262, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_Name
-      value: L (3)
+      value: Orange L Bottom Left
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.x
@@ -810,7 +810,7 @@ GameObject:
   - component: {fileID: 125848450}
   - component: {fileID: 125848449}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: RWB CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1126,7 +1126,7 @@ GameObject:
   - component: {fileID: 155684819}
   - component: {fileID: 155684820}
   m_Layer: 0
-  m_Name: rb
+  m_Name: Blue-red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1183,7 +1183,7 @@ GameObject:
   - component: {fileID: 158185595}
   - component: {fileID: 158185594}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Red Top Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1317,7 +1317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4741454124259517854, guid: 4f5f49050afe6da4180f8c50a89db6e5, type: 3}
       propertyPath: m_Name
-      value: l 1
+      value: White | Bottom Left
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1425,7 +1425,7 @@ GameObject:
   - component: {fileID: 190683258}
   - component: {fileID: 190683257}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Red Top Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1524,11 +1524,11 @@ Transform:
   m_GameObject: {fileID: 194612859}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.590003, y: 4.59, z: 0}
-  m_LocalScale: {x: 1, y: 9, z: 9}
+  m_LocalPosition: {x: -10.819994, y: 45.4, z: -56.800003}
+  m_LocalScale: {x: 2, y: 18, z: 18}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 532903180}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &194612862
 MeshRenderer:
@@ -1654,7 +1654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4741454124259517854, guid: 4f5f49050afe6da4180f8c50a89db6e5, type: 3}
       propertyPath: m_Name
-      value: l 1
+      value: Yellow | Bottom Right
       objectReference: {fileID: 0}
     - target: {fileID: 5797771747970211796, guid: 4f5f49050afe6da4180f8c50a89db6e5, type: 3}
       propertyPath: m_Color.b
@@ -1740,7 +1740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4741454124259517854, guid: 4f5f49050afe6da4180f8c50a89db6e5, type: 3}
       propertyPath: m_Name
-      value: l 1 (3)
+      value: Blue | Bottom Right
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1910,7 +1910,7 @@ GameObject:
   - component: {fileID: 228305677}
   - component: {fileID: 228305676}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: White Middle Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2004,7 +2004,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4749501216999754262, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_Name
-      value: L (1)
+      value: White L Middle Right
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.x
@@ -2119,11 +2119,11 @@ Transform:
   m_GameObject: {fileID: 259442990}
   serializedVersion: 2
   m_LocalRotation: {x: -0.49999997, y: 0.50000006, z: -0.49999997, w: 0.5000001}
-  m_LocalPosition: {x: 0, y: 9.180004, z: -0}
-  m_LocalScale: {x: 1, y: 9, z: 9}
+  m_LocalPosition: {x: -20, y: 54.58001, z: -56.800003}
+  m_LocalScale: {x: 2, y: 18, z: 18}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 532903180}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
 --- !u!23 &259442993
 MeshRenderer:
@@ -2187,7 +2187,7 @@ GameObject:
   - component: {fileID: 294592744}
   - component: {fileID: 294592743}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Blue Middle Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2270,7 +2270,7 @@ GameObject:
   - component: {fileID: 312134862}
   - component: {fileID: 312134863}
   m_Layer: 0
-  m_Name: ow
+  m_Name: Orange-White
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2396,26 +2396,19 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 991119459}
-  - {fileID: 1564696361}
-  - {fileID: 2059694607}
-  - {fileID: 1078426764}
-  - {fileID: 710204485}
-  - {fileID: 69700674}
+  - {fileID: 1286469158}
+  - {fileID: 1983883268}
+  - {fileID: 1803296349}
+  - {fileID: 84675272}
   - {fileID: 1371596570}
   - {fileID: 312134862}
-  - {fileID: 155684819}
-  - {fileID: 532903180}
+  - {fileID: 1564696361}
+  - {fileID: 2059694607}
   - {fileID: 359211829}
-  - {fileID: 84675272}
-  - {fileID: 846303977}
-  - {fileID: 1698939662}
-  - {fileID: 1838634408}
-  - {fileID: 336274288}
-  - {fileID: 1803296349}
   - {fileID: 806278991}
-  - {fileID: 1983883268}
   - {fileID: 378631444}
+  - {fileID: 1698939662}
+  - {fileID: 155684819}
   - {fileID: 1676273972}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2565,7 +2558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5522756872577177764, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Name
-      value: T (6)
+      value: Yellow T Top Left
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2583,7 +2576,7 @@ GameObject:
   - component: {fileID: 336274288}
   - component: {fileID: 336274289}
   m_Layer: 0
-  m_Name: rwg corner
+  m_Name: Red-White-Green-Corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2598,15 +2591,15 @@ Transform:
   m_GameObject: {fileID: 336274287}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.719997, y: 5.409996, z: -4.9000015}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 19.439995, y: 11.219994, z: 23.199997}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1849409360}
   - {fileID: 1331594699}
   - {fileID: 1689051256}
   - {fileID: 703704702}
-  m_Father: {fileID: 315000923}
+  m_Father: {fileID: 1286469158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &336274289
 BoxCollider:
@@ -2651,7 +2644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4749501216999754262, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_Name
-      value: L (6)
+      value: Yellow L Bottom Right
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.x
@@ -2745,7 +2738,7 @@ GameObject:
   - component: {fileID: 359211829}
   - component: {fileID: 359211830}
   m_Layer: 0
-  m_Name: yb
+  m_Name: Yellow-Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2804,7 +2797,7 @@ GameObject:
   - component: {fileID: 360234469}
   - component: {fileID: 360234468}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: OW CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2923,7 +2916,7 @@ GameObject:
   m_Component:
   - component: {fileID: 368915748}
   m_Layer: 0
-  m_Name: Orange
+  m_Name: Orange-Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2959,7 +2952,7 @@ GameObject:
   - component: {fileID: 370518737}
   - component: {fileID: 370518736}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: Yellow Top Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3042,7 +3035,7 @@ GameObject:
   - component: {fileID: 378631444}
   - component: {fileID: 378631445}
   m_Layer: 0
-  m_Name: gw
+  m_Name: Green-White
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3192,7 +3185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4741454124259517854, guid: 4f5f49050afe6da4180f8c50a89db6e5, type: 3}
       propertyPath: m_Name
-      value: l 1 (4)
+      value: Orange | Middle Right
       objectReference: {fileID: 0}
     - target: {fileID: 5797771747970211796, guid: 4f5f49050afe6da4180f8c50a89db6e5, type: 3}
       propertyPath: m_Color.b
@@ -3285,7 +3278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5522756872577177764, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Name
-      value: T
+      value: Green T Middle Right
       objectReference: {fileID: 0}
     - target: {fileID: 8151122329544756798, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Color.b
@@ -3548,7 +3541,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4749501216999754262, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_Name
-      value: L (8)
+      value: Blue L Middle Right
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.x
@@ -3927,7 +3920,7 @@ GameObject:
   - component: {fileID: 532903180}
   - component: {fileID: 532903181}
   m_Layer: 0
-  m_Name: rby
+  m_Name: Red-Yellow-Blue-Corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3942,18 +3935,15 @@ Transform:
   m_GameObject: {fileID: 532903179}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: -14.59, z: -4.9000015}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -20, y: -28.779999, z: 23.199997}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 809570126}
   - {fileID: 2003611022}
   - {fileID: 1351655309}
-  - {fileID: 259442991}
-  - {fileID: 194612860}
-  - {fileID: 4518881}
   - {fileID: 1020030643}
-  m_Father: {fileID: 315000923}
+  m_Father: {fileID: 1286469158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &532903181
 BoxCollider:
@@ -4043,7 +4033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4741454124259517854, guid: 4f5f49050afe6da4180f8c50a89db6e5, type: 3}
       propertyPath: m_Name
-      value: l 1 (5)
+      value: White | Bottom Left
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4167,7 +4157,7 @@ GameObject:
   - component: {fileID: 573874366}
   - component: {fileID: 573874365}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Red Bottom Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4251,7 +4241,7 @@ GameObject:
   - component: {fileID: 577465806}
   - component: {fileID: 577465805}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Red Bottom Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4269,7 +4259,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 4.59, z: 4.5900006}
   m_LocalScale: {x: 1, y: 9, z: 9}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1144049466}
   m_Father: {fileID: 1838634408}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!23 &577465805
@@ -4334,7 +4325,7 @@ GameObject:
   - component: {fileID: 600051609}
   - component: {fileID: 600051608}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: Yellow Bottom Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4502,7 +4493,7 @@ GameObject:
   - component: {fileID: 612583027}
   - component: {fileID: 612583026}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Orange Top Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4672,7 +4663,7 @@ GameObject:
   m_Component:
   - component: {fileID: 673276474}
   m_Layer: 0
-  m_Name: Green
+  m_Name: Green-Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4710,7 +4701,7 @@ GameObject:
   - component: {fileID: 679635422}
   - component: {fileID: 679635421}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: OB CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4920,9 +4911,9 @@ GameObject:
   - component: {fileID: 703704705}
   - component: {fileID: 703704704}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Green Top Right
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5086,7 +5077,7 @@ GameObject:
   - component: {fileID: 710204485}
   - component: {fileID: 710204486}
   m_Layer: 0
-  m_Name: wbo
+  m_Name: Orange-Blue-White-Corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5101,15 +5092,15 @@ Transform:
   m_GameObject: {fileID: 710204484}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.00000013411044, w: 1}
-  m_LocalPosition: {x: -10.030021, y: 5.4100113, z: -24.900002}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -20.060041, y: 11.220024, z: -16.800003}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2127162628}
   - {fileID: 1928571366}
   - {fileID: 1976855045}
   - {fileID: 612583024}
-  m_Father: {fileID: 315000923}
+  m_Father: {fileID: 1286469158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &710204486
 BoxCollider:
@@ -5206,7 +5197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5522756872577177764, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Name
-      value: T
+      value: Red T Top Middle
       objectReference: {fileID: 0}
     - target: {fileID: 8151122329544756798, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Color.b
@@ -5254,7 +5245,7 @@ GameObject:
   - component: {fileID: 727710633}
   - component: {fileID: 727710632}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Red Middle Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5454,7 +5445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 765583326}
   m_Layer: 0
-  m_Name: White
+  m_Name: White-Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5500,7 +5491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4749501216999754262, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_Name
-      value: L (10)
+      value: Orange L Bottom Middle
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.x
@@ -5750,7 +5741,7 @@ GameObject:
   - component: {fileID: 806278991}
   - component: {fileID: 806278992}
   m_Layer: 0
-  m_Name: gy
+  m_Name: Yellow-Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5809,7 +5800,7 @@ GameObject:
   - component: {fileID: 809570131}
   - component: {fileID: 809570130}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: RYB CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5975,7 +5966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4741454124259517854, guid: 4f5f49050afe6da4180f8c50a89db6e5, type: 3}
       propertyPath: m_Name
-      value: l 1
+      value: Red | Middle Left
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6008,7 +5999,7 @@ GameObject:
   - component: {fileID: 846303977}
   - component: {fileID: 846303978}
   m_Layer: 0
-  m_Name: brw c
+  m_Name: Red-White-Blue-Corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6023,15 +6014,15 @@ Transform:
   m_GameObject: {fileID: 846303976}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: 5.409996, z: -4.9000015}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -20, y: 11.219994, z: 23.199997}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 125848445}
   - {fileID: 2055322358}
   - {fileID: 158185592}
   - {fileID: 905379605}
-  m_Father: {fileID: 315000923}
+  m_Father: {fileID: 1286469158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &846303978
 BoxCollider:
@@ -6205,7 +6196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5522756872577177764, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Name
-      value: T
+      value: Blue T Top Left
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6224,7 +6215,7 @@ GameObject:
   - component: {fileID: 856594973}
   - component: {fileID: 856594972}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Orange Top Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6311,7 +6302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 889387297}
   m_Layer: 0
-  m_Name: Red
+  m_Name: Red-Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6347,7 +6338,7 @@ GameObject:
   - component: {fileID: 905379608}
   - component: {fileID: 905379607}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: White Bottom RIght
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6431,7 +6422,7 @@ GameObject:
   - component: {fileID: 908437917}
   - component: {fileID: 908437916}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Orange Bottom Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6513,7 +6504,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4749501216999754262, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_Name
-      value: L
+      value: Red L Bottom Right
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.x
@@ -6586,7 +6577,7 @@ GameObject:
   - component: {fileID: 931163903}
   - component: {fileID: 931163902}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: OY CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6732,7 +6723,7 @@ GameObject:
   - component: {fileID: 991119459}
   - component: {fileID: 991119460}
   m_Layer: 0
-  m_Name: yob
+  m_Name: Orange-Blue-Yellow-Corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6747,15 +6738,15 @@ Transform:
   m_GameObject: {fileID: 991119458}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.00000013411044, w: 1}
-  m_LocalPosition: {x: -10.000012, y: -14.589989, z: -24.900002}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -20.000025, y: -28.779976, z: -16.800003}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1376694786}
   - {fileID: 1036681644}
   - {fileID: 1260688138}
   - {fileID: 600051606}
-  m_Father: {fileID: 315000923}
+  m_Father: {fileID: 1286469158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &991119460
 BoxCollider:
@@ -6792,7 +6783,7 @@ GameObject:
   - component: {fileID: 998976453}
   - component: {fileID: 998976452}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: OYG CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6966,7 +6957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5522756872577177764, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Name
-      value: T (1)
+      value: Yellow T Middle Right
       objectReference: {fileID: 0}
     - target: {fileID: 8151122329544756798, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Color.g
@@ -7008,7 +6999,7 @@ GameObject:
   - component: {fileID: 1006243720}
   - component: {fileID: 1006243719}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: RW CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7186,7 +7177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5522756872577177764, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Name
-      value: T
+      value: Red T Bottom Middle
       objectReference: {fileID: 0}
     - target: {fileID: 8151122329544756798, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Color.b
@@ -7234,7 +7225,7 @@ GameObject:
   - component: {fileID: 1020030646}
   - component: {fileID: 1020030645}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: Yellow Bottom Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7318,7 +7309,7 @@ GameObject:
   - component: {fileID: 1036681647}
   - component: {fileID: 1036681646}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Blue Bottom Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7582,7 +7573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1077734401}
   m_Layer: 0
-  m_Name: Blue
+  m_Name: Blue-Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7617,7 +7608,7 @@ GameObject:
   - component: {fileID: 1078426764}
   - component: {fileID: 1078426765}
   m_Layer: 0
-  m_Name: gyo
+  m_Name: Orange-Yellow-Green-Corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7632,15 +7623,15 @@ Transform:
   m_GameObject: {fileID: 1078426763}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.00000013411044, w: 1}
-  m_LocalPosition: {x: 9.969985, y: -14.589981, z: -24.910004}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 19.93997, y: -28.77996, z: -16.820007}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 998976448}
   - {fileID: 1213652662}
   - {fileID: 2034668908}
   - {fileID: 370518734}
-  m_Father: {fileID: 315000923}
+  m_Father: {fileID: 1286469158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1078426765
 BoxCollider:
@@ -7782,7 +7773,7 @@ GameObject:
   - component: {fileID: 1149483358}
   - component: {fileID: 1149483357}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Green Bottom Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8010,7 +8001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4741454124259517854, guid: 4f5f49050afe6da4180f8c50a89db6e5, type: 3}
       propertyPath: m_Name
-      value: l 1
+      value: Red | Top Right
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8236,7 +8227,7 @@ GameObject:
   - component: {fileID: 1213652665}
   - component: {fileID: 1213652664}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Green Bottom Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8382,7 +8373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5522756872577177764, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Name
-      value: T (5)
+      value: Orange T Bottom Right
       objectReference: {fileID: 0}
     - target: {fileID: 8151122329544756798, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Color.b
@@ -8435,7 +8426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 978473278389850530, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_Name
-      value: X (3)
+      value: Green X Bottom Left
       objectReference: {fileID: 0}
     - target: {fileID: 4723048127840987860, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_Color.b
@@ -8626,7 +8617,7 @@ GameObject:
   - component: {fileID: 1260688141}
   - component: {fileID: 1260688140}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Orange Bottom Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8772,7 +8763,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5522756872577177764, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Name
-      value: T (4)
+      value: Green T Middle Left
       objectReference: {fileID: 0}
     - target: {fileID: 8151122329544756798, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Color.b
@@ -8894,7 +8885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4749501216999754262, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_Name
-      value: L (1)
+      value: Green L Top Right
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.x
@@ -8977,6 +8968,45 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
+--- !u!1 &1286469157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1286469158}
+  m_Layer: 0
+  m_Name: Corner Pieces
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1286469158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286469157}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.20000076, z: -16.5}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 336274288}
+  - {fileID: 846303977}
+  - {fileID: 532903180}
+  - {fileID: 1838634408}
+  - {fileID: 991119459}
+  - {fileID: 710204485}
+  - {fileID: 69700674}
+  - {fileID: 1078426764}
+  m_Father: {fileID: 315000923}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1293805768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9058,7 +9088,7 @@ GameObject:
   - component: {fileID: 1294499371}
   - component: {fileID: 1294499370}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Green Top Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9300,7 +9330,7 @@ GameObject:
   - component: {fileID: 1331594702}
   - component: {fileID: 1331594701}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: 'Red Top Left '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9384,7 +9414,7 @@ GameObject:
   - component: {fileID: 1351655312}
   - component: {fileID: 1351655311}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Red Bottom Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9468,7 +9498,7 @@ GameObject:
   - component: {fileID: 1353163037}
   - component: {fileID: 1353163036}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: White Middle Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9551,7 +9581,7 @@ GameObject:
   - component: {fileID: 1371596570}
   - component: {fileID: 1371596571}
   m_Layer: 0
-  m_Name: og
+  m_Name: Orange-Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9694,7 +9724,7 @@ GameObject:
   - component: {fileID: 1376694791}
   - component: {fileID: 1376694790}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: OBY CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9810,7 +9840,7 @@ GameObject:
   - component: {fileID: 1381808200}
   - component: {fileID: 1381808199}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Orange Middle Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9901,7 +9931,7 @@ GameObject:
   - component: {fileID: 1384726828}
   - component: {fileID: 1384726827}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: OG CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10186,7 +10216,7 @@ GameObject:
   - component: {fileID: 1418478020}
   - component: {fileID: 1418478019}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: RY CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10424,7 +10454,7 @@ GameObject:
   - component: {fileID: 1429243609}
   - component: {fileID: 1429243608}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: White Bottom Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10596,7 +10626,7 @@ GameObject:
   - component: {fileID: 1443541683}
   - component: {fileID: 1443541682}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Orange Middle Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10680,7 +10710,7 @@ GameObject:
   - component: {fileID: 1448930574}
   - component: {fileID: 1448930573}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: Yellow Top Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10826,7 +10856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5522756872577177764, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Name
-      value: T
+      value: Blue T Bottom Left
       objectReference: {fileID: 0}
     - target: {fileID: 8151122329544756798, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Color.b
@@ -10874,7 +10904,7 @@ GameObject:
   - component: {fileID: 1451766912}
   - component: {fileID: 1451766911}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Orange Middle Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11118,7 +11148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5522756872577177764, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Name
-      value: T (2)
+      value: Orange T Middle Left
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11141,7 +11171,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1838634408}
+    m_TransformParent: {fileID: 577465803}
     m_Modifications:
     - target: {fileID: 4548949325486082959, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_Color.g
@@ -11153,47 +11183,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4749501216999754262, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_Name
-      value: L
+      value: Red L Bottom Left
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.49999994
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.055555552
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.055555552
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.8549976
+      value: -0.7450006
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7249985
+      value: -0.31833354
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.335001
+      value: -0.31722197
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5000001
+      value: 0.00000008940697
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.49999997
+      value: -0.000000029802322
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.50000006
+      value: -0.70710695
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.49999997
+      value: -0.7071067
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11323,7 +11353,7 @@ GameObject:
   - component: {fileID: 1564696361}
   - component: {fileID: 1564696362}
   m_Layer: 0
-  m_Name: ob
+  m_Name: Orange-Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11536,7 +11566,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4749501216999754262, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_Name
-      value: L (11)
+      value: Green L Bottom Right
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.x
@@ -11607,7 +11637,7 @@ GameObject:
   - component: {fileID: 1632019477}
   - component: {fileID: 1632019476}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: Yellow Middle Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11784,7 +11814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5522756872577177764, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Name
-      value: T (2)
+      value: Red T Top Left
       objectReference: {fileID: 0}
     - target: {fileID: 8151122329544756798, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Color.b
@@ -11964,7 +11994,7 @@ GameObject:
   - component: {fileID: 1689051259}
   - component: {fileID: 1689051258}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: White Bottom Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12162,7 +12192,7 @@ GameObject:
   - component: {fileID: 1698939662}
   - component: {fileID: 1698939663}
   m_Layer: 0
-  m_Name: bw
+  m_Name: Blue-White
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12217,7 +12247,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 978473278389850530, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_Name
-      value: X (2)
+      value: Green X Top Left
       objectReference: {fileID: 0}
     - target: {fileID: 8562546515132424154, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_LocalScale.x
@@ -12452,7 +12482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4741454124259517854, guid: 4f5f49050afe6da4180f8c50a89db6e5, type: 3}
       propertyPath: m_Name
-      value: l 1 (2)
+      value: Orange | Top Left
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12553,7 +12583,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4749501216999754262, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_Name
-      value: L (4)
+      value: Orange L Middle Top
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.x
@@ -12634,7 +12664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 978473278389850530, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_Name
-      value: X
+      value: White X Bottom Right
       objectReference: {fileID: 0}
     - target: {fileID: 4723048127840987860, guid: 58e94ad8bbfcdfb46a0a47dc2dc4a070, type: 3}
       propertyPath: m_Color.b
@@ -12745,7 +12775,7 @@ GameObject:
   - component: {fileID: 1803296349}
   - component: {fileID: 1803296350}
   m_Layer: 0
-  m_Name: rg
+  m_Name: Red-Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12924,7 +12954,7 @@ GameObject:
   - component: {fileID: 1838634408}
   - component: {fileID: 1838634409}
   m_Layer: 0
-  m_Name: ygr corner
+  m_Name: Red-Yellow-Green-Corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12939,16 +12969,15 @@ Transform:
   m_GameObject: {fileID: 1838634407}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.719997, y: -14.59, z: -4.9000015}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 19.439995, y: -28.779999, z: 23.199997}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 33127365}
   - {fileID: 577465803}
-  - {fileID: 1144049466}
   - {fileID: 1149483355}
   - {fileID: 1448930571}
-  m_Father: {fileID: 315000923}
+  m_Father: {fileID: 1286469158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1838634409
 BoxCollider:
@@ -13073,7 +13102,7 @@ GameObject:
   - component: {fileID: 1842175420}
   - component: {fileID: 1842175419}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: OGW CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13191,7 +13220,7 @@ GameObject:
   - component: {fileID: 1849409365}
   - component: {fileID: 1849409364}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: RWG CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13423,7 +13452,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4749501216999754262, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_Name
-      value: L (9)
+      value: Blue L Top Right
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.x
@@ -13579,7 +13608,7 @@ GameObject:
   - component: {fileID: 1919423772}
   - component: {fileID: 1919423771}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: RG CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13695,7 +13724,7 @@ GameObject:
   - component: {fileID: 1928571369}
   - component: {fileID: 1928571368}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Blue Top Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13785,7 +13814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4749501216999754262, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_Name
-      value: L (1)
+      value: Yellow L Top Right
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.x
@@ -13882,7 +13911,7 @@ GameObject:
   - component: {fileID: 1976855048}
   - component: {fileID: 1976855047}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: White Top Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13965,7 +13994,7 @@ GameObject:
   - component: {fileID: 1983883268}
   - component: {fileID: 1983883269}
   m_Layer: 0
-  m_Name: wr
+  m_Name: Red-White
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14020,7 +14049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1986943208}
   m_Layer: 0
-  m_Name: Yellow
+  m_Name: Yellow-Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14056,7 +14085,7 @@ GameObject:
   - component: {fileID: 2003611025}
   - component: {fileID: 2003611024}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Blue Bottom Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14195,7 +14224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4741454124259517854, guid: 4f5f49050afe6da4180f8c50a89db6e5, type: 3}
       propertyPath: m_Name
-      value: l 1 (6)
+      value: Orange | Top Right
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14214,7 +14243,7 @@ GameObject:
   - component: {fileID: 2034668911}
   - component: {fileID: 2034668910}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Orange Bottom Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14367,7 +14396,7 @@ GameObject:
   - component: {fileID: 2055322361}
   - component: {fileID: 2055322360}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Blue Top Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14450,7 +14479,7 @@ GameObject:
   - component: {fileID: 2059694607}
   - component: {fileID: 2059694608}
   m_Layer: 0
-  m_Name: yo
+  m_Name: Orange-Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14633,7 +14662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4749501216999754262, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_Name
-      value: L (1)
+      value: White L Top Left
       objectReference: {fileID: 0}
     - target: {fileID: 5837096730607872813, guid: c49e63e5ccd38674dab05c5e76225dfc, type: 3}
       propertyPath: m_LocalScale.x
@@ -14843,7 +14872,7 @@ GameObject:
   - component: {fileID: 2127162633}
   - component: {fileID: 2127162632}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: OBW CUBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15009,7 +15038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5522756872577177764, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Name
-      value: T
+      value: White T Middle Left
       objectReference: {fileID: 0}
     - target: {fileID: 6169460451577012820, guid: 1cbbd8b96ad7a684ea8d6c4f5170546d, type: 3}
       propertyPath: m_Enabled
@@ -15151,5 +15180,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 1124277483}
   - {fileID: 772890373}
-  - {fileID: 315000923}
   - {fileID: 225306466}
+  - {fileID: 259442991}
+  - {fileID: 194612860}
+  - {fileID: 4518881}
+  - {fileID: 315000923}
