@@ -5,16 +5,26 @@ using UnityEngine;
 
 public class playercont : MonoBehaviour
 {
+    [Header("Components")]
     public Rigidbody RB;
-    public float maxspeed;
-    public float movespeed;
-    public float jump;
-    public GameObject currentbox;
-    public Transform camtarget;
     public Camera cam;
+    //[Header("Ints")]
+    //Ints
+    [Header("Floats")]
+    [Tooltip("Max player move speed")]public float maxspeed;
+    [Tooltip("player speed applied every frame")]public float movespeed;
+    [Tooltip("jump force applied")]public float jump;
+    //[Header("Lists")]
+    //lists
+    [Header("Objects")]
+    [Tooltip("Current face player is on")]public GameObject currentbox;
+    [Tooltip("target for the camera to start at")]public Transform camtarget;
+    //[Header("Audio")]
+    //Audio
 
     public void Update()
     {
+        #region Input
         if (Input.GetKey(KeyCode.D))
         {
             RB.AddForce(transform.right*movespeed/10,ForceMode.Impulse);
@@ -29,11 +39,13 @@ public class playercont : MonoBehaviour
         {
             RB.AddForce(transform.up*jump,ForceMode.Impulse);
         }
-        
+        #endregion
+        #region Physics calcs
         if (RB.velocity.magnitude > maxspeed)
         {
             RB.drag = 4;
         }
+        #endregion
     }
 
     public void OnTriggerEnter(Collider other)

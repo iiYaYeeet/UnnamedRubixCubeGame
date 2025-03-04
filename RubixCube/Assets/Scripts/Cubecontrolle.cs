@@ -4,13 +4,27 @@ using UnityEngine;
 
 public class Cubecontrolle : MonoBehaviour
 {
-    public List<GameObject> rotating;
+    //[Header("Components")]
+    //components
+    [Header("Objects")]
+    //objects
+    [Tooltip("Central Rubix cube core")] public GameObject core;
+    [Tooltip("Outer face cores")]public GameObject redcore, bluecore, whitecore, orangecore, yellowcore, greencore;
+    [Tooltip("Overlap box for rotation")]public GameObject redoverlap, blueoverlap, whiteoverlap, orangeoverlap, yellowoverlap, greenoverlap;
+    [Header("Lists")]
+    [Tooltip("Currently rotating objects")]public List<GameObject> rotating;
     public List<GameObject> everything;
-    public GameObject redcore, bluecore, whitecore, orangecore, yellowcore, greencore,x,y,z,core;
-    public GameObject redoverlap, blueoverlap, whiteoverlap, orangeoverlap, yellowoverlap, greenoverlap;
-    public int control;
+    [Header("Ints")]
+    [Tooltip("Side to rotate")]public int control;
+    //[Header("Components")]
+    //components
+    //[Header("Floats")]
+    //Floats
+    //[Header("Audio")]
+    //Audio
     void Update()
     {
+        #region Select face input
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             foreach (GameObject obj in everything)
@@ -29,10 +43,11 @@ public class Cubecontrolle : MonoBehaviour
             rotating.Clear();
             control--;
         }
-
+        #endregion
         switch (control)
         {
             case 0:
+                #region White face rotation
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     checkcollision(whiteoverlap);
@@ -54,7 +69,9 @@ public class Cubecontrolle : MonoBehaviour
                     rotating.Clear();
                 }
                 break;
+                #endregion
             case 1:
+                #region Red face rotation
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     checkcollision(redoverlap);
@@ -74,7 +91,9 @@ public class Cubecontrolle : MonoBehaviour
                     redcore.transform.Rotate(new Vector3(0,0,-90));
                 }
                 break;
+                #endregion
             case 2:
+                #region Blue face rotation
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     checkcollision(blueoverlap);
@@ -94,7 +113,9 @@ public class Cubecontrolle : MonoBehaviour
                     bluecore.transform.Rotate(new Vector3(-90,0,0));
                 }
                 break;
+                #endregion
             case 3:
+                #region Orange face rotation
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     checkcollision(orangeoverlap);
@@ -114,7 +135,9 @@ public class Cubecontrolle : MonoBehaviour
                     orangecore.transform.Rotate(new Vector3(0,0,-90));
                 }
                 break;
+                #endregion
             case 4:
+                #region Yellow face rotation
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     checkcollision(yellowoverlap);
@@ -134,7 +157,9 @@ public class Cubecontrolle : MonoBehaviour
                     yellowcore.transform.Rotate(new Vector3(0,-90,0));
                 }
                 break;
+                #endregion
             case 5:
+                #region Green face rotation
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     checkcollision(greenoverlap);
@@ -154,6 +179,7 @@ public class Cubecontrolle : MonoBehaviour
                     greencore.transform.Rotate(new Vector3(-90,0,0));
                 }
                 break;
+                #endregion
         }
     }
 
