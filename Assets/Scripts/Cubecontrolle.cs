@@ -27,19 +27,19 @@ public class Cubecontrolle : MonoBehaviour
         #region Select face input
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            foreach (GameObject obj in everything)
+            /*foreach (GameObject obj in everything)
             {
                 obj.transform.SetParent(core.transform);
-            }
+            }*/
             rotating.Clear();
             control++;
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            foreach (GameObject obj in everything)
+            /*foreach (GameObject obj in everything)
             {
                 obj.transform.SetParent(core.transform);
-            }
+            }*/
             rotating.Clear();
             control--;
         }
@@ -188,7 +188,10 @@ public class Cubecontrolle : MonoBehaviour
         Collider[] cols = Physics.OverlapBox(cr.transform.position, cr.transform.localScale, cr.transform.rotation);
         foreach (var col in cols)
         {
-            rotating.Add(col.gameObject);
+            if (col.gameObject.CompareTag("Rotatable"))
+            {
+                rotating.Add(col.gameObject);
+            }
         }
     }
 }

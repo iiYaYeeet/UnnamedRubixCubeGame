@@ -59,7 +59,7 @@ public class playercont : MonoBehaviour
         camtarget = currentbox.transform.Find("Target");
         while (cam.transform.position!=camtarget.transform.position)
         {
-            cam.transform.position=Vector3.Lerp(cam.transform.position,camtarget.transform.position,0.2f);
+            cam.transform.position=Vector3.Lerp(cam.transform.position,camtarget.transform.position,0.07f);
             yield return new WaitForFixedUpdate();
         }
     }
