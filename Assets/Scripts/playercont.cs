@@ -12,16 +12,19 @@ public class playercont : MonoBehaviour
     //Ints
     [Header("Floats")]
     [Tooltip("Max player move speed")]public float maxspeed;
-    [Tooltip("player speed applied every frame")]public float movespeed;
+    [Tooltip("Player speed applied every frame")]public float movespeed;
     [Tooltip("jump force applied")]public float jump;
     //[Header("Lists")]
     //lists
     [Header("Objects")]
     [Tooltip("Current face player is on")]public GameObject currentbox;
-    [Tooltip("target for the camera to start at")]public Transform camtarget;
+    [Tooltip("Target for the camera to start at")]public Transform camtarget;
     //[Header("Audio")]
     //Audio
-
+    public void Start()
+    {
+        Gamemanager.God.PC = this;
+    }
     public void Update()
     {
         #region Input

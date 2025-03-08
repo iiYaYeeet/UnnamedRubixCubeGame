@@ -16,12 +16,17 @@ public class Cubecontrolle : MonoBehaviour
     public List<GameObject> everything;
     [Header("Ints")]
     [Tooltip("Side to rotate")]public int control;
-    //[Header("Components")]
-    //components
+    [Header("Components")]
+    public Animator anim;
     //[Header("Floats")]
     //Floats
     //[Header("Audio")]
     //Audio
+    
+    public void Start()
+    {
+        Gamemanager.God.CC = this;
+    }
     void Update()
     {
         #region Select face input
