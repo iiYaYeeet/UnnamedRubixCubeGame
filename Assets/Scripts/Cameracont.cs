@@ -25,24 +25,28 @@ public class Cameracont : MonoBehaviour
         #region Cube driven camera
         if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
         {
+            Vector3 directionvec = (transform.position - cubecenter.transform.position).normalized;
+            #region inputs
+            float pull = Input.GetAxis("Mouse ScrollWheel")  * (camsens*200) * Time.deltaTime;
+            float xRot = Input.GetAxis("Mouse X") * (camsens*150) * Time.deltaTime;
+            float yRot = -Input.GetAxis("Mouse Y") * (camsens*150) * Time.deltaTime;
+            Vector3 move = RB.velocity;
+            move += transform.forward * pull;
+            #endregion
             if (Input.GetMouseButton(0))
             {
-                float xRot = Input.GetAxis("Mouse X") * camsens;
-                float yRot = -Input.GetAxis("Mouse Y") * camsens;
-                //set 0
-                Vector3 move = RB.velocity;
                 move += transform.up * yRot;
                 move -= transform.right * xRot;
-                //plug back in
-                RB.velocity = move;
             }
+            move += transform.forward * pull;
+            RB.velocity = move;
             cam.transform.LookAt(cubecenter.transform);
             //calc distance
             float distance = Vector3.Distance(cam.transform.position, cubecenter.transform.position);
             if (distance > maxdistance)
             {
                 //if too far out pull back in
-                Vector3 directionvec = (transform.position - cubecenter.transform.position).normalized;
+                directionvec = (transform.position - cubecenter.transform.position).normalized;
                 RB.AddForce(directionvec*-((distance-maxdistance)/2));
             }
         }
