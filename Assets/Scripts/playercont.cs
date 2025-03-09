@@ -7,9 +7,10 @@ public class playercont : MonoBehaviour
 {
     [Header("Components")]
     public Rigidbody RB;
-    public Camera cam;
     //[Header("Ints")]
     //Ints
+    [Header("Bools")]
+    public bool playercontrol;
     [Header("Floats")]
     [Tooltip("Max player move speed")]public float maxspeed;
     [Tooltip("Player speed applied every frame")]public float movespeed;
@@ -53,19 +54,16 @@ public class playercont : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        currentbox = other.gameObject;
-        StartCoroutine(cameramove());
+        if (playercontrol)
+        {
+            Playercammovement(other.gameObject);
+        }
     }
 
-    public IEnumerator cameramove()
+    public void Playercammovement(GameObject curbox)
     {
-        camtarget = currentbox.transform.Find("Target");
-        while (cam.transform.position!=camtarget.transform.position)
-        {
-            cam.transform.position=Vector3.Lerp(cam.transform.position,camtarget.transform.position,0.05f);
-            cam.transform.LookAt(camtarget.transform.parent,camtarget.transform.up);
-            transform.rotation = camtarget.transform.rotation;
-            yield return new WaitForFixedUpdate();
-        }
+        currentbox = curbox.gameObject;
+        Gamemanager.God.CaC.camtarget = currentbox.transform.Find("Target");
+        Gamemanager.God.CaC.StartCoroutine(nameof(Cameracont.cameramove));
     }
 }

@@ -13,7 +13,7 @@ public class Gamemanager : MonoBehaviour
             playerControlled,
             cubeControlled
         }
-        State GameState = State.playerControlled;
+        [SerializeField] public State GameState = State.playerControlled;
         #endregion
         
     #endregion
@@ -23,6 +23,7 @@ public class Gamemanager : MonoBehaviour
         public static Gamemanager GM;
         public static playercont PC;
         public static Cubecontrolle CC;
+        public static Cameracont CaC;
     }
     public void Start()
     {
@@ -30,25 +31,18 @@ public class Gamemanager : MonoBehaviour
     }
     #endregion
 
-    public void Update()
-    {
-        #region StateManagement;
-
-        //manage state
-
-        #endregion
-    }
-
     public void switchState()
     {
         if (GameState == State.playerControlled)
         {
             GameState = State.cubeControlled;
+            God.PC.playercontrol = false;
         }
-
-        if (GameState == State.cubeControlled)
+        else if (GameState == State.cubeControlled)
         {
-           GameState = State.playerControlled; 
+           GameState = State.playerControlled;
+           God.PC.playercontrol = true;
+           God.PC.Playercammovement(God.PC.currentbox);
         }
     }
 }
