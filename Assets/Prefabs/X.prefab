@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 4723048127840987860}
   - component: {fileID: 4328865033232733804}
   m_Layer: 0
-  m_Name: Circle (2)
+  m_Name: ColliderRegister
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -391,7 +391,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 5691551516024296243}
   - component: {fileID: 4743949883824040353}
   m_Layer: 0
-  m_Name: Circle (5)
+  m_Name: ColliderRegister
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -497,7 +497,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -544,7 +544,7 @@ GameObject:
   - component: {fileID: 9019049449440890531}
   - component: {fileID: 2298721456600156692}
   m_Layer: 0
-  m_Name: Circle (4)
+  m_Name: ColliderRegister
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -634,7 +634,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -733,7 +733,7 @@ GameObject:
   - component: {fileID: 324135462246364867}
   - component: {fileID: 8618458101889921375}
   m_Layer: 0
-  m_Name: Circle (3)
+  m_Name: ColliderRegister
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -823,7 +823,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

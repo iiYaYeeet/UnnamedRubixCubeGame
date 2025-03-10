@@ -29,49 +29,23 @@ public class Cubecontrolle : MonoBehaviour
     }
     void Update()
     {
-        #region Select face input
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            /*foreach (GameObject obj in everything)
-            {
-                obj.transform.SetParent(core.transform);
-            }*/
-            rotating.Clear();
-            control++;
-        }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            /*foreach (GameObject obj in everything)
-            {
-                obj.transform.SetParent(core.transform);
-            }*/
-            rotating.Clear();
-            control--;
-        }
-        #endregion
         switch (control)
         {
             case 0:
                 #region White face rotation
-                if (Input.GetKeyDown(KeyCode.A))
+                if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
                 {
-                    checkcollision(whiteoverlap);
-                    foreach (GameObject obj in rotating)
+                    if (Input.GetMouseButton(1))
                     {
-                        obj.transform.SetParent(whitecore.transform);
+                        checkcollision(whiteoverlap);
+                        foreach (GameObject obj in rotating)
+                        {
+                            obj.transform.SetParent(whitecore.transform);
+                        }
+
+                        float yRot = Input.GetAxis("Mouse Y") * (-12 * 50) * Time.deltaTime;
+                        whitecore.transform.Rotate(new Vector3(0, yRot, 0));
                     }
-                    whitecore.transform.Rotate(new Vector3(0,90,0));
-                    rotating.Clear();
-                }
-                if (Input.GetKeyDown(KeyCode.D))
-                {
-                    checkcollision(whiteoverlap);
-                    foreach (GameObject obj in rotating)
-                    {
-                        obj.transform.SetParent(whitecore.transform);
-                    }
-                    whitecore.transform.Rotate(new Vector3(0,-90,0));
-                    rotating.Clear();
                 }
                 break;
                 #endregion
@@ -84,7 +58,7 @@ public class Cubecontrolle : MonoBehaviour
                     {
                         obj.transform.SetParent(redcore.transform);
                     }
-                    redcore.transform.Rotate(new Vector3(0,0,90));
+                    StartCoroutine(Rotate(redcore, 3, false));
                 }
                 if (Input.GetKeyDown(KeyCode.D))
                 {
@@ -93,7 +67,7 @@ public class Cubecontrolle : MonoBehaviour
                     {
                         obj.transform.SetParent(redcore.transform);
                     }
-                    redcore.transform.Rotate(new Vector3(0,0,-90));
+                    StartCoroutine(Rotate(redcore, 3, true));
                 }
                 break;
                 #endregion
@@ -106,7 +80,7 @@ public class Cubecontrolle : MonoBehaviour
                     {
                         obj.transform.SetParent(bluecore.transform);
                     }
-                    bluecore.transform.Rotate(new Vector3(90,0,0));
+                    StartCoroutine(Rotate(bluecore, 1, false));
                 }
                 if (Input.GetKeyDown(KeyCode.D))
                 {
@@ -115,7 +89,7 @@ public class Cubecontrolle : MonoBehaviour
                     {
                         obj.transform.SetParent(bluecore.transform);
                     }
-                    bluecore.transform.Rotate(new Vector3(-90,0,0));
+                    StartCoroutine(Rotate(bluecore, 1, true));
                 }
                 break;
                 #endregion
@@ -128,7 +102,7 @@ public class Cubecontrolle : MonoBehaviour
                     {
                         obj.transform.SetParent(orangecore.transform);
                     }
-                    orangecore.transform.Rotate(new Vector3(0,0,90));
+                    StartCoroutine(Rotate(orangecore, 3, false));
                 }
                 if (Input.GetKeyDown(KeyCode.D))
                 {
@@ -137,7 +111,7 @@ public class Cubecontrolle : MonoBehaviour
                     {
                         obj.transform.SetParent(orangecore.transform);
                     }
-                    orangecore.transform.Rotate(new Vector3(0,0,-90));
+                    StartCoroutine(Rotate(orangecore, 3, true));
                 }
                 break;
                 #endregion
@@ -150,7 +124,7 @@ public class Cubecontrolle : MonoBehaviour
                     {
                         obj.transform.SetParent(yellowcore.transform);
                     }
-                    yellowcore.transform.Rotate(new Vector3(0,90,0));
+                    StartCoroutine(Rotate(yellowcore, 2, false));
                 }
                 if (Input.GetKeyDown(KeyCode.D))
                 {
@@ -159,7 +133,7 @@ public class Cubecontrolle : MonoBehaviour
                     {
                         obj.transform.SetParent(yellowcore.transform);
                     }
-                    yellowcore.transform.Rotate(new Vector3(0,-90,0));
+                    StartCoroutine(Rotate(yellowcore, 2, true));
                 }
                 break;
                 #endregion
@@ -172,7 +146,7 @@ public class Cubecontrolle : MonoBehaviour
                     {
                         obj.transform.SetParent(greencore.transform);
                     }
-                    greencore.transform.Rotate(new Vector3(90,0,0));
+                    StartCoroutine(Rotate(greencore, 1, false));
                 }
                 if (Input.GetKeyDown(KeyCode.D))
                 {
@@ -181,10 +155,85 @@ public class Cubecontrolle : MonoBehaviour
                     {
                         obj.transform.SetParent(greencore.transform);
                     }
-                    greencore.transform.Rotate(new Vector3(-90,0,0));
+                    StartCoroutine(Rotate(greencore, 1, true));
                 }
                 break;
                 #endregion
+        }
+    }
+
+    public IEnumerator Rotate(GameObject core, int xyz, bool r)
+    {
+        switch (xyz)
+        {
+            case 1:
+                if (r)
+                {
+                    float goalrot = core.transform.rotation.eulerAngles.x + 90;
+                    Debug.Log(goalrot);
+                    while (core.transform.localRotation.eulerAngles.x<goalrot)
+                    {
+                        core.transform.Rotate(-5,0,0);
+                        yield return new WaitForFixedUpdate();
+                    }
+                    
+                }
+                else
+                {
+                    float goalrot = core.transform.rotation.eulerAngles.x - 90;
+                    Debug.Log(goalrot);
+                    while (core.transform.localRotation.eulerAngles.x>goalrot)
+                    {
+                        core.transform.Rotate(5,0,0);
+                        yield return new WaitForFixedUpdate();
+                    }
+                }
+                break;
+            case 2:
+                if (r)
+                {
+                    float goalrot = core.transform.localRotation.y + 90;
+                    Debug.Log(goalrot);
+                    while (core.transform.localRotation.eulerAngles.y<goalrot+0.1)
+                    {
+                        core.transform.Rotate(new Vector3(0,Mathf.LerpAngle(0,90,0.01f),0));
+                        yield return new WaitForFixedUpdate();
+                    }
+                }
+                else
+                {
+                    float goalrot = core.transform.localRotation.y - 90;
+                    Debug.Log(goalrot);
+                    while (core.transform.localRotation.eulerAngles.y>goalrot-0.01)
+                    {
+                        core.transform.Rotate(new Vector3(0,Mathf.LerpAngle(0,-90,0.01f),0));
+                        yield return new WaitForFixedUpdate();
+                    }
+                }
+                break;
+            
+            case 3:
+                if (r)
+                {
+                    float goalrot = core.transform.localRotation.z + 90;
+                    Debug.Log(goalrot);
+                    while (core.transform.localRotation.eulerAngles.z<goalrot+0.01)
+                    {
+                        core.transform.Rotate(new Vector3(0,0,Mathf.LerpAngle(0,90,0.01f)));
+                        yield return new WaitForFixedUpdate();
+                    }
+                }
+                else
+                {
+                    float goalrot = core.transform.localRotation.z - 90;
+                    Debug.Log(goalrot);
+                    while (core.transform.localRotation.eulerAngles.z>goalrot-0.01)
+                    {
+                        core.transform.Rotate(new Vector3(0,0,Mathf.LerpAngle(0,-90,0.01f)));
+                        yield return new WaitForFixedUpdate();
+                    }
+                }
+                break;
         }
     }
 

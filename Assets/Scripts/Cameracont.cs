@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Cameracont : MonoBehaviour
 {
+    #region Declerations
     [Header("Floats")]
     public float maxdistance;
     public float camsens;
@@ -14,6 +15,7 @@ public class Cameracont : MonoBehaviour
     [Header("Objects")]
     [Tooltip("Target for the camera to start at")]public Transform camtarget;
     [Tooltip("Center of the cube")]public GameObject cubecenter;
+    #endregion
     
     public void Start()
     {
@@ -25,6 +27,7 @@ public class Cameracont : MonoBehaviour
         #region Cube driven camera
         if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
         {
+            #region camera rotation
             Vector3 directionvec = (transform.position - cubecenter.transform.position).normalized;
             #region inputs
             float pull = Input.GetAxis("Mouse ScrollWheel")  * (camsens*200) * Time.deltaTime;
@@ -38,6 +41,7 @@ public class Cameracont : MonoBehaviour
                 move += transform.up * yRot;
                 move -= transform.right * xRot;
             }
+            #region calculations
             move += transform.forward * pull;
             RB.velocity = move;
             cam.transform.LookAt(cubecenter.transform);
@@ -49,6 +53,62 @@ public class Cameracont : MonoBehaviour
                 directionvec = (transform.position - cubecenter.transform.position).normalized;
                 RB.AddForce(directionvec*-((distance-maxdistance)/2));
             }
+            #endregion
+            #endregion
+            
+            #region side selection
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+                {
+                    Debug.Log("fired");
+                    Debug.Log(hit.collider.gameObject.name);
+                    switch (hit.collider.gameObject.name)
+                    {
+                        case "White":
+                        {
+                            Gamemanager.God.CC.rotating.Clear();
+                            Gamemanager.God.CC.control = 0;
+                        }
+                            break;
+                        case "Red":
+                        {
+                            Gamemanager.God.CC.rotating.Clear();
+                            Gamemanager.God.CC.control = 1;
+                        }
+                            break;
+                        case "Blue":
+                        {
+                            Gamemanager.God.CC.rotating.Clear();
+                            Gamemanager.God.CC.control = 2;
+                        }
+                            break;
+                        case "Orange":
+                        {
+                            Gamemanager.God.CC.rotating.Clear();
+                            Gamemanager.God.CC.control = 3;
+                        }
+                            break;
+                        case "Yellow":
+                        {
+                            Gamemanager.God.CC.rotating.Clear();
+                            Gamemanager.God.CC.control = 4;
+                        }
+                            break;
+                        case "Green":
+                        {
+                            Gamemanager.God.CC.rotating.Clear();
+                            Gamemanager.God.CC.control = 5;
+                        }
+                            break;
+                    }
+                }
+            }
+
+            #endregion
         }
         #endregion
 

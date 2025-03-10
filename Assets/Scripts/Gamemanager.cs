@@ -15,6 +15,10 @@ public class Gamemanager : MonoBehaviour
         }
         [SerializeField] public State GameState = State.playerControlled;
         #endregion
+
+        [Header("Lists")] 
+        public List<BoxCollider> playerColliders;
+        public List<BoxCollider> ControlColliders;
         
     #endregion
     #region Static Class setup
@@ -37,11 +41,27 @@ public class Gamemanager : MonoBehaviour
         {
             GameState = State.cubeControlled;
             God.PC.playercontrol = false;
+            foreach (BoxCollider collider in playerColliders)
+            {
+                collider.enabled = false;
+            }
+            foreach (BoxCollider collider in ControlColliders)
+            {
+                collider.enabled = true;
+            }
         }
         else if (GameState == State.cubeControlled)
         {
            GameState = State.playerControlled;
            God.PC.playercontrol = true;
+           foreach (BoxCollider collider in playerColliders)
+           {
+               collider.enabled = true;
+           }
+           foreach (BoxCollider collider in ControlColliders)
+           {
+               collider.enabled = false;
+           }
            God.PC.Playercammovement(God.PC.currentbox);
         }
     }
