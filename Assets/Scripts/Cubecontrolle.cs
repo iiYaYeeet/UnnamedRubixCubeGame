@@ -22,6 +22,9 @@ public class Cubecontrolle : MonoBehaviour
     //Floats
     //[Header("Audio")]
     //Audio
+
+    public float yRot;
+    public float xRot;
     
     public void Start()
     {
@@ -29,214 +32,191 @@ public class Cubecontrolle : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetMouseButton(1))
+        {
+            if (Input.mousePosition.x < Screen.width / 2)
+            {
+                
+                yRot = -Input.GetAxis("Mouse Y") * (-12 * 50) * Time.deltaTime;
+            }
+            else
+            {
+                yRot = Input.GetAxis("Mouse Y") * (-12 * 50) * Time.deltaTime;
+            }
+
+            if (Input.mousePosition.y < Screen.height / 2)
+            {
+                xRot = Input.GetAxis("Mouse X") * (-12 * 50) * Time.deltaTime;
+            }
+            else
+            {
+                xRot = -Input.GetAxis("Mouse X") * (-12 * 50) * Time.deltaTime;
+            }
+        }
+
         switch (control)
         {
             case 0:
+
                 #region White face rotation
+
                 if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
                 {
+                    foreach (GameObject obj in rotating)
+                    {
+                        obj.transform.SetParent(whitecore.transform);
+                    }
+
                     if (Input.GetMouseButton(1))
                     {
-                        checkcollision(whiteoverlap);
-                        foreach (GameObject obj in rotating)
-                        {
-                            obj.transform.SetParent(whitecore.transform);
-                        }
-
-                        float yRot = Input.GetAxis("Mouse Y") * (-12 * 50) * Time.deltaTime;
-                        float xRot = Input.GetAxis("Mouse X") * (-12 * 50) * Time.deltaTime;
                         whitecore.transform.RotateAround(whitecore.transform.position, Vector3.up, yRot);
                         whitecore.transform.RotateAround(whitecore.transform.position, Vector3.up, xRot);
-                        //whitecore.transform.Rotate(new Vector3(0, yRot, 0));
                     }
-                }
-                break;
-                #endregion
-            case 1:
-                #region Red face rotation
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    checkcollision(redoverlap);
-                    foreach (GameObject obj in rotating)
-                    {
-                        obj.transform.SetParent(redcore.transform);
-                    }
-                    StartCoroutine(Rotate(redcore, 3, false));
-                }
-                if (Input.GetKeyDown(KeyCode.D))
-                {
-                    checkcollision(redoverlap);
-                    foreach (GameObject obj in rotating)
-                    {
-                        obj.transform.SetParent(redcore.transform);
-                    }
-                    StartCoroutine(Rotate(redcore, 3, true));
-                }
-                break;
-                #endregion
-            case 2:
-                #region Blue face rotation
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    checkcollision(blueoverlap);
-                    foreach (GameObject obj in rotating)
-                    {
-                        obj.transform.SetParent(bluecore.transform);
-                    }
-                    StartCoroutine(Rotate(bluecore, 1, false));
-                }
-                if (Input.GetKeyDown(KeyCode.D))
-                {
-                    checkcollision(blueoverlap);
-                    foreach (GameObject obj in rotating)
-                    {
-                        obj.transform.SetParent(bluecore.transform);
-                    }
-                    StartCoroutine(Rotate(bluecore, 1, true));
-                }
-                break;
-                #endregion
-            case 3:
-                #region Orange face rotation
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    checkcollision(orangeoverlap);
-                    foreach (GameObject obj in rotating)
-                    {
-                        obj.transform.SetParent(orangecore.transform);
-                    }
-                    StartCoroutine(Rotate(orangecore, 3, false));
-                }
-                if (Input.GetKeyDown(KeyCode.D))
-                {
-                    checkcollision(orangeoverlap);
-                    foreach (GameObject obj in rotating)
-                    {
-                        obj.transform.SetParent(orangecore.transform);
-                    }
-                    StartCoroutine(Rotate(orangecore, 3, true));
-                }
-                break;
-                #endregion
-            case 4:
-                #region Yellow face rotation
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    checkcollision(yellowoverlap);
-                    foreach (GameObject obj in rotating)
-                    {
-                        obj.transform.SetParent(yellowcore.transform);
-                    }
-                    StartCoroutine(Rotate(yellowcore, 2, false));
-                }
-                if (Input.GetKeyDown(KeyCode.D))
-                {
-                    checkcollision(yellowoverlap);
-                    foreach (GameObject obj in rotating)
-                    {
-                        obj.transform.SetParent(yellowcore.transform);
-                    }
-                    StartCoroutine(Rotate(yellowcore, 2, true));
-                }
-                break;
-                #endregion
-            case 5:
-                #region Green face rotation
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    checkcollision(greenoverlap);
-                    foreach (GameObject obj in rotating)
-                    {
-                        obj.transform.SetParent(greencore.transform);
-                    }
-                    StartCoroutine(Rotate(greencore, 1, false));
-                }
-                if (Input.GetKeyDown(KeyCode.D))
-                {
-                    checkcollision(greenoverlap);
-                    foreach (GameObject obj in rotating)
-                    {
-                        obj.transform.SetParent(greencore.transform);
-                    }
-                    StartCoroutine(Rotate(greencore, 1, true));
-                }
-                break;
-                #endregion
-        }
-    }
 
-    public IEnumerator Rotate(GameObject core, int xyz, bool r)
-    {
-        switch (xyz)
-        {
+                    if (Input.GetMouseButtonUp(1))
+                    {
+                        float snappedValue = Mathf.Round(whitecore.transform.localRotation.eulerAngles.y / 90) * 90;
+                        whitecore.transform.localRotation = Quaternion.Euler(0, snappedValue, 0);
+                    }
+                }
+
+                break;
+
+            #endregion
+
             case 1:
-                if (r)
+
+                #region Red face rotation
+
+                if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
                 {
-                    float goalrot = core.transform.rotation.eulerAngles.x + 90;
-                    Debug.Log(goalrot);
-                    while (core.transform.localRotation.eulerAngles.x<goalrot)
+                    foreach (GameObject obj in rotating)
                     {
-                        core.transform.Rotate(-5,0,0);
-                        yield return new WaitForFixedUpdate();
+                        obj.transform.SetParent(redcore.transform);
                     }
-                    
-                }
-                else
-                {
-                    float goalrot = core.transform.rotation.eulerAngles.x - 90;
-                    Debug.Log(goalrot);
-                    while (core.transform.localRotation.eulerAngles.x>goalrot)
+
+                    if (Input.GetMouseButton(1))
                     {
-                        core.transform.Rotate(5,0,0);
-                        yield return new WaitForFixedUpdate();
+                        redcore.transform.RotateAround(redcore.transform.position, Vector3.forward, yRot);
+                        redcore.transform.RotateAround(redcore.transform.position, Vector3.forward, xRot);
+                    }
+
+                    if (Input.GetMouseButtonUp(1))
+                    {
+                        float snappedValue = Mathf.Round(redcore.transform.localRotation.eulerAngles.z / 90) * 90;
+                        redcore.transform.localRotation = Quaternion.Euler(0, 0, snappedValue);
                     }
                 }
                 break;
+
+            #endregion
+
             case 2:
-                if (r)
+
+                #region Blue face rotation
+
+                if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
                 {
-                    float goalrot = core.transform.localRotation.y + 90;
-                    Debug.Log(goalrot);
-                    while (core.transform.localRotation.eulerAngles.y<goalrot+0.1)
+                    foreach (GameObject obj in rotating)
                     {
-                        core.transform.Rotate(new Vector3(0,Mathf.LerpAngle(0,90,0.01f),0));
-                        yield return new WaitForFixedUpdate();
+                        obj.transform.SetParent(bluecore.transform);
                     }
-                }
-                else
-                {
-                    float goalrot = core.transform.localRotation.y - 90;
-                    Debug.Log(goalrot);
-                    while (core.transform.localRotation.eulerAngles.y>goalrot-0.01)
+
+                    if (Input.GetMouseButton(1))
                     {
-                        core.transform.Rotate(new Vector3(0,Mathf.LerpAngle(0,-90,0.01f),0));
-                        yield return new WaitForFixedUpdate();
+                        bluecore.transform.RotateAround(bluecore.transform.position, Vector3.left, yRot);
+                        bluecore.transform.RotateAround(bluecore.transform.position, Vector3.left, xRot);
+                    }
+
+                    if (Input.GetMouseButtonUp(1))
+                    {
+                        float snappedValue = Mathf.Round(bluecore.transform.localRotation.eulerAngles.x / 90) * 90;
+                        bluecore.transform.localRotation = Quaternion.Euler(snappedValue, 0, 0);
                     }
                 }
                 break;
-            
+
+            #endregion
+
             case 3:
-                if (r)
+
+                #region Orange face rotation
+
+                if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
                 {
-                    float goalrot = core.transform.localRotation.z + 90;
-                    Debug.Log(goalrot);
-                    while (core.transform.localRotation.eulerAngles.z<goalrot+0.01)
+                    foreach (GameObject obj in rotating)
                     {
-                        core.transform.Rotate(new Vector3(0,0,Mathf.LerpAngle(0,90,0.01f)));
-                        yield return new WaitForFixedUpdate();
+                        obj.transform.SetParent(orangecore.transform);
                     }
-                }
-                else
-                {
-                    float goalrot = core.transform.localRotation.z - 90;
-                    Debug.Log(goalrot);
-                    while (core.transform.localRotation.eulerAngles.z>goalrot-0.01)
+
+                    if (Input.GetMouseButton(1))
                     {
-                        core.transform.Rotate(new Vector3(0,0,Mathf.LerpAngle(0,-90,0.01f)));
-                        yield return new WaitForFixedUpdate();
+                        orangecore.transform.RotateAround(orangecore.transform.position, Vector3.back, yRot);
+                        orangecore.transform.RotateAround(orangecore.transform.position, Vector3.back, xRot);
+                    }
+
+                    if (Input.GetMouseButtonUp(1))
+                    {
+                        float snappedValue = Mathf.Round(orangecore.transform.localRotation.eulerAngles.z / 90) * 90;
+                        orangecore.transform.localRotation = Quaternion.Euler(0, 0,snappedValue); 
                     }
                 }
                 break;
+
+            #endregion
+
+            case 4:
+
+                #region Yellow face rotation
+
+                if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
+                {
+                    foreach (GameObject obj in rotating)
+                    {
+                        obj.transform.SetParent(yellowcore.transform);
+                    }
+
+                    if (Input.GetMouseButton(1))
+                    {
+                        yellowcore.transform.RotateAround(yellowcore.transform.position, Vector3.down, yRot);
+                        yellowcore.transform.RotateAround(yellowcore.transform.position, Vector3.down, xRot);
+                    }
+
+                    if (Input.GetMouseButtonUp(1))
+                    {
+                        float snappedValue = Mathf.Round(yellowcore.transform.localRotation.eulerAngles.y / 90) * 90;
+                        yellowcore.transform.localRotation = Quaternion.Euler(0, snappedValue, 0);
+                    }
+                }
+
+                break;
+
+            #endregion
+
+            case 5:
+
+                #region Green face rotation
+
+                if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
+                {
+                    foreach (GameObject obj in rotating)
+                    {
+                        obj.transform.SetParent(greencore.transform);
+                    }
+                    if (Input.GetMouseButton(1))
+                    {
+                        greencore.transform.RotateAround(greencore.transform.position, Vector3.right, yRot);
+                        greencore.transform.RotateAround(greencore.transform.position, Vector3.right, xRot);
+                    }
+                    if (Input.GetMouseButtonUp(1))
+                    {
+                        float snappedValue = Mathf.Round(greencore.transform.localRotation.eulerAngles.x / 90) * 90;
+                        greencore.transform.localRotation = Quaternion.Euler(snappedValue, 0, 0);
+                    }
+                }
+                break;
+
+            #endregion
         }
     }
 

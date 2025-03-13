@@ -64,43 +64,47 @@ public class Cameracont : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity))
                 {
-                    Debug.Log("fired");
-                    Debug.Log(hit.collider.gameObject.name);
                     switch (hit.collider.gameObject.name)
                     {
                         case "White":
                         {
                             Gamemanager.God.CC.rotating.Clear();
+                            Gamemanager.God.CC.checkcollision(Gamemanager.God.CC.whiteoverlap);
                             Gamemanager.God.CC.control = 0;
                         }
                             break;
                         case "Red":
                         {
                             Gamemanager.God.CC.rotating.Clear();
+                            Gamemanager.God.CC.checkcollision(Gamemanager.God.CC.redoverlap);
                             Gamemanager.God.CC.control = 1;
                         }
                             break;
                         case "Blue":
                         {
                             Gamemanager.God.CC.rotating.Clear();
+                            Gamemanager.God.CC.checkcollision(Gamemanager.God.CC.blueoverlap);
                             Gamemanager.God.CC.control = 2;
                         }
                             break;
                         case "Orange":
                         {
                             Gamemanager.God.CC.rotating.Clear();
+                            Gamemanager.God.CC.checkcollision(Gamemanager.God.CC.orangeoverlap);
                             Gamemanager.God.CC.control = 3;
                         }
                             break;
                         case "Yellow":
                         {
                             Gamemanager.God.CC.rotating.Clear();
+                            Gamemanager.God.CC.checkcollision(Gamemanager.God.CC.yellowoverlap);
                             Gamemanager.God.CC.control = 4;
                         }
                             break;
                         case "Green":
                         {
                             Gamemanager.God.CC.rotating.Clear();
+                            Gamemanager.God.CC.checkcollision(Gamemanager.God.CC.greenoverlap);
                             Gamemanager.God.CC.control = 5;
                         }
                             break;
