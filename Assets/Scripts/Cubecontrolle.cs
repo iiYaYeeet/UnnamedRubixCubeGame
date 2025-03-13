@@ -44,7 +44,10 @@ public class Cubecontrolle : MonoBehaviour
                         }
 
                         float yRot = Input.GetAxis("Mouse Y") * (-12 * 50) * Time.deltaTime;
-                        whitecore.transform.Rotate(new Vector3(0, yRot, 0));
+                        float xRot = Input.GetAxis("Mouse X") * (-12 * 50) * Time.deltaTime;
+                        whitecore.transform.RotateAround(whitecore.transform.position, Vector3.up, yRot);
+                        whitecore.transform.RotateAround(whitecore.transform.position, Vector3.up, xRot);
+                        //whitecore.transform.Rotate(new Vector3(0, yRot, 0));
                     }
                 }
                 break;
