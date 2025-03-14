@@ -119,7 +119,7 @@ public class Cameracont : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //state change
-            Gamemanager.God.GM.switchState();
+            //Gamemanager.God.GM.switchState();
         }
     }
 

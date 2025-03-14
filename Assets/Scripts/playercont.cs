@@ -11,6 +11,9 @@ public class playercont : MonoBehaviour
     //Ints
     [Header("Bools")]
     public bool playercontrol;
+    public bool grounded;
+    public bool wall;
+    public bool right;
     [Header("Floats")]
     [Tooltip("Max player move speed")]public float maxspeed;
     [Tooltip("Player speed applied every frame")]public float movespeed;
@@ -31,27 +34,104 @@ public class playercont : MonoBehaviour
         #region Input
         if (Input.GetKey(KeyCode.D))
         {
-            RB.AddForce(transform.right*movespeed/10,ForceMode.Impulse);
+            if (grounded)
+            {
+                if (!wall)
+                {
+                    RB.AddForce(transform.right * movespeed, ForceMode.Force);
+                }
+            }
+            else
+            {
+                if (!wall)
+                {
+                    RB.AddForce(transform.right * movespeed/5, ForceMode.Force);
+                }
+            }
         }
         
         if (Input.GetKey(KeyCode.A))
         {
-            RB.AddForce(transform.right*-movespeed/10,ForceMode.Impulse);
+            if (grounded)
+            {
+                if (!wall)
+                {
+                    RB.AddForce(transform.right * -movespeed, ForceMode.Force);
+                }
+            }
+            else
+            {
+                if (!wall)
+                {
+                    RB.AddForce(transform.right * -movespeed/5, ForceMode.Force);
+                }
+            }
         }
 
+        if (wall)
+        {
+            RB.drag = 1;
+        }
+        else
+        {
+            RB.drag = 0.5f;
+        }
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            RB.AddForce(transform.up*jump,ForceMode.Impulse);
+            if (grounded)
+            {
+                RB.AddForce(transform.up*jump,ForceMode.Impulse);
+            }
+            if (wall)
+            {
+                if (right)
+                {
+                    RB.AddForce(transform.right*-jump/1.5f, ForceMode.Impulse);
+                }
+                else
+                {
+                    RB.AddForce(transform.right*jump/1.5f, ForceMode.Impulse);
+                }
+                RB.AddForce(transform.up*jump,ForceMode.Impulse);
+            }
         }
         #endregion
         #region Physics calcs
-        if (RB.velocity.magnitude > maxspeed)
-        {
-            RB.drag = 4;
-        }
+        //
         #endregion
     }
 
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit, transform.localScale.magnitude+0.1f))
+            {
+                right = false;
+                wall = true;
+            }
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, transform.localScale.magnitude+0.1f))
+            { 
+                right = true;
+                wall = true;
+            }
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, transform.localScale.magnitude+0.1f))
+            { 
+                grounded = true;
+            }
+        }
+    }
+    public void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            wall = false;
+            grounded = false;
+        }
+    }
+    
     public void OnTriggerEnter(Collider other)
     {
         if (playercontrol)
