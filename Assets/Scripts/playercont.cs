@@ -23,6 +23,8 @@ public class playercont : MonoBehaviour
     [Header("Objects")]
     [Tooltip("Current face player is on")]public GameObject currentbox;
     [Tooltip("Target for the camera to start at")]public Transform camtarget;
+
+    public GameObject bottomcol;
     //[Header("Audio")]
     //Audio
     public void Start()
@@ -93,7 +95,7 @@ public class playercont : MonoBehaviour
                 {
                     RB.AddForce(transform.right*jump/1.5f, ForceMode.Impulse);
                 }
-                RB.AddForce(transform.up*jump,ForceMode.Impulse);
+                RB.AddForce(transform.up*jump/4,ForceMode.Impulse);
             }
         }
         #endregion
@@ -106,6 +108,7 @@ public class playercont : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
+            Collider[] bcols = Physics.OverlapBox(bottomcol.transform.position, bottomcol.transform.localScale, bottomcol.transform.rotation);
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit, transform.localScale.magnitude+0.1f))
             {
@@ -117,7 +120,7 @@ public class playercont : MonoBehaviour
                 right = true;
                 wall = true;
             }
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, transform.localScale.magnitude+0.1f))
+            if (bcols.Length > 0)
             { 
                 grounded = true;
             }
