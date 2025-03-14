@@ -7,6 +7,7 @@ public class playercont : MonoBehaviour
 {
     [Header("Components")]
     public Rigidbody RB;
+    public Animator anim;
     //[Header("Ints")]
     //Ints
     [Header("Bools")]
@@ -40,6 +41,7 @@ public class playercont : MonoBehaviour
             {
                 if (!wall)
                 {
+                    anim.SetBool("walk", true);
                     RB.AddForce(transform.right * movespeed, ForceMode.Force);
                 }
             }
@@ -47,6 +49,7 @@ public class playercont : MonoBehaviour
             {
                 if (!wall)
                 {
+                    anim.SetBool("walk", false);
                     RB.AddForce(transform.right * movespeed/5, ForceMode.Force);
                 }
             }
@@ -58,6 +61,7 @@ public class playercont : MonoBehaviour
             {
                 if (!wall)
                 {
+                    anim.SetBool("walk", true);
                     RB.AddForce(transform.right * -movespeed, ForceMode.Force);
                 }
             }
@@ -65,11 +69,21 @@ public class playercont : MonoBehaviour
             {
                 if (!wall)
                 {
+                    anim.SetBool("walk", false);
                     RB.AddForce(transform.right * -movespeed/5, ForceMode.Force);
                 }
             }
         }
 
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            anim.SetBool("walk", false);
+        }
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            anim.SetBool("walk", false);
+        }
+        anim.SetFloat("speed", Mathf.Abs(RB.velocity.magnitude/2));
         if (wall)
         {
             RB.drag = 1;
@@ -101,27 +115,31 @@ public class playercont : MonoBehaviour
         #endregion
         #region Physics calcs
         //
+        Debug.DrawRay(transform.position, -transform.right, Color.green);
+        Debug.DrawRay(transform.position, transform.right, Color.green);
         #endregion
     }
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
-            Collider[] bcols = Physics.OverlapBox(bottomcol.transform.position, bottomcol.transform.localScale, bottomcol.transform.rotation);
+            Collider[] bcols = Physics.OverlapBox(bottomcol.transform.position, bottomcol.transform.lossyScale, bottomcol.transform.rotation);
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit, transform.localScale.magnitude+0.1f))
+            if (Physics.Raycast(transform.position, -transform.right, out hit, transform.localScale.magnitude+0.01f))
             {
                 right = false;
                 wall = true;
+                grounded = false;
             }
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, transform.localScale.magnitude+0.1f))
+            if (Physics.Raycast(transform.position, transform.right, out hit, transform.localScale.magnitude+0.01f))
             { 
                 right = true;
                 wall = true;
+                grounded = false;
             }
             if (bcols.Length > 0)
-            { 
+            {
                 grounded = true;
             }
         }
