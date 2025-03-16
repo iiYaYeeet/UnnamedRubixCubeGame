@@ -54,6 +54,10 @@ public class Cubecontrolle : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            StartCoroutine(rand());
+        }
         switch (control)
         {
             case 0:
@@ -217,9 +221,123 @@ public class Cubecontrolle : MonoBehaviour
                 break;
 
             #endregion
+
         }
     }
 
+    public IEnumerator rand()
+    {
+        int loops = Random.Range(10, 30);
+        for (int i = 0; i < loops; i++)
+        {
+            int random = Random.Range(0, 6);
+            if (random == 0)
+            {
+                checkcollision(whiteoverlap);
+                foreach (GameObject obj in rotating)
+                {
+                    obj.transform.SetParent(whitecore.transform);
+                }
+                if (Random.Range(0, 1) == 0)
+                {
+                    whitecore.transform.Rotate(0,90,0);
+                    rotating.Clear();
+                    yield return new WaitForFixedUpdate();
+                }
+                else
+                {
+                    whitecore.transform.Rotate(0,-90,0);
+                    rotating.Clear();
+                    yield return new WaitForFixedUpdate();
+                }
+                yield return new WaitForFixedUpdate();
+            }
+            if (random == 1)
+            {
+                checkcollision(redoverlap);
+                foreach (GameObject obj in rotating)
+                {
+                    obj.transform.SetParent(redcore.transform);
+                }
+                if (Random.Range(0, 1) == 0)
+                {
+                    redcore.transform.Rotate(0,0,90);
+                    rotating.Clear();
+                    yield return new WaitForFixedUpdate();
+                }
+                else
+                {
+                    redcore.transform.Rotate(0,0,-90);
+                    rotating.Clear();
+                    yield return new WaitForFixedUpdate();
+                }
+                yield return new WaitForFixedUpdate();
+            }
+            if (random == 2)
+            {
+                checkcollision(yellowoverlap);
+                foreach (GameObject obj in rotating)
+                {
+                    obj.transform.SetParent(yellowcore.transform);
+                }
+                if (Random.Range(0, 1) == 0)
+                {
+                    yellowcore.transform.Rotate(0,90,0);
+                    rotating.Clear();
+                    yield return new WaitForFixedUpdate();
+                }
+                else
+                {
+                    yellowcore.transform.Rotate(0,-90,0);
+                    rotating.Clear();
+                    yield return new WaitForFixedUpdate();
+                }
+                yield return new WaitForFixedUpdate();
+            }
+            if (random == 3)
+            {
+                checkcollision(greenoverlap);
+                foreach (GameObject obj in rotating)
+                {
+                    obj.transform.SetParent(greencore.transform);
+                }
+                if (Random.Range(0, 1) == 0)
+                {
+                    greencore.transform.Rotate(90,0,0);
+                    rotating.Clear();
+                    yield return new WaitForFixedUpdate();
+                }
+                else
+                {
+                    greencore.transform.Rotate(-90,0,0);
+                    rotating.Clear();
+                    yield return new WaitForFixedUpdate();
+                }
+                yield return new WaitForFixedUpdate();
+            }
+            if (random == 4)
+            {
+                checkcollision(blueoverlap);
+                foreach (GameObject obj in rotating)
+                {
+                    obj.transform.SetParent(bluecore.transform);
+                }
+                if (Random.Range(0, 1) == 0)
+                {
+                    bluecore.transform.Rotate(90,0,0);
+                    rotating.Clear();
+                    yield return new WaitForFixedUpdate();
+                }
+                else
+                {
+                    bluecore.transform.Rotate(-90,0,0);
+                    rotating.Clear();
+                    yield return new WaitForFixedUpdate();
+                }
+                yield return new WaitForFixedUpdate();
+            }
+        }
+    }
     public void checkcollision(GameObject cr)
     {
         Collider[] cols = Physics.OverlapBox(cr.transform.position, cr.transform.localScale, cr.transform.rotation);
