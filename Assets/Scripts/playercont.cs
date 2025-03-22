@@ -15,23 +15,31 @@ public class playercont : MonoBehaviour
     public bool grounded;
     public bool wall;
     public bool right;
+    public bool interact;
     [Header("Floats")]
     [Tooltip("Max player move speed")]public float maxspeed;
     [Tooltip("Player speed applied every frame")]public float movespeed;
-    [Tooltip("jump force applied")]public float jump;
+    [Tooltip("Jump force applied")]public float jump;
+    public float gravitymult;
     //[Header("Lists")]
     //lists
     [Header("Objects")]
     [Tooltip("Current face player is on")]public GameObject currentbox;
     [Tooltip("Target for the camera to start at")]public Transform camtarget;
-
-    public GameObject bottomcol;
+    [Tooltip("Bottom overlapbox for player")]public GameObject bottomcol;
+    public GameObject heldobj;
     //[Header("Audio")]
     //Audio
     public void Start()
     {
         Gamemanager.God.PC = this;
     }
+
+    public void FixedUpdate()
+    {
+        RB.AddForce(Physics.gravity * gravitymult, ForceMode.Acceleration);
+    }
+
     public void Update()
     {
         #region Input
@@ -42,7 +50,7 @@ public class playercont : MonoBehaviour
                 if (!wall)
                 {
                     anim.SetBool("walk", true);
-                    RB.AddForce(transform.right * movespeed, ForceMode.Force);
+                    RB.AddForce(transform.right * movespeed, ForceMode.Acceleration);
                 }
             }
             else
@@ -50,7 +58,7 @@ public class playercont : MonoBehaviour
                 if (!wall)
                 {
                     anim.SetBool("walk", false);
-                    RB.AddForce(transform.right * movespeed/5, ForceMode.Force);
+                    RB.AddForce(transform.right * movespeed/5, ForceMode.Acceleration);
                 }
             }
         }
@@ -113,10 +121,13 @@ public class playercont : MonoBehaviour
             }
         }
         #endregion
+
+        if (heldobj != null)
+        {
+            heldobj.transform.position = Vector3.MoveTowards(heldobj.transform.position, transform.position, 0.01f*Vector3.Distance(transform.position, heldobj.transform.position));
+        }
         #region Physics calcs
-        //
-        Debug.DrawRay(transform.position, -transform.right, Color.green);
-        Debug.DrawRay(transform.position, transform.right, Color.green);
+        //w
         #endregion
     }
 
@@ -158,6 +169,24 @@ public class playercont : MonoBehaviour
         if (playercontrol)
         {
             Playercammovement(other.gameObject);
+        }
+
+        if (other.gameObject.CompareTag("Pickup"))
+        {
+            heldobj = other.gameObject;
+            other.enabled=false;
+        }
+        if (other.gameObject.CompareTag("QuestNPC"))
+        {
+            interact = true;
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("QuestNPC"))
+        {
+            interact = false;
         }
     }
 

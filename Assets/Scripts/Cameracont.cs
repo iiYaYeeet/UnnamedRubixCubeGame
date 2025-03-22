@@ -128,7 +128,8 @@ public class Cameracont : MonoBehaviour
         while (Vector3.Distance(transform.position, camtarget.position) > 0.05f)
         {
             cam.transform.position=Vector3.Lerp(cam.transform.position,camtarget.transform.position,0.05f);
-            cam.transform.LookAt(camtarget.transform.parent,camtarget.transform.up);
+            transform.rotation = camtarget.transform.localRotation;
+            cam.transform.LookAt(camtarget.transform.parent.position,transform.up);
             if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
             {
                 yield break;
@@ -136,6 +137,6 @@ public class Cameracont : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
         Debug.Log("cleared");
-        transform.rotation = camtarget.transform.rotation;
+        transform.rotation = camtarget.transform.localRotation;
     }
 }

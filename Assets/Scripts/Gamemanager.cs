@@ -31,6 +31,7 @@ public class Gamemanager : MonoBehaviour
     }
     public void Start()
     {
+        Application.targetFrameRate = 60;
         God.GM = this;
     }
     #endregion

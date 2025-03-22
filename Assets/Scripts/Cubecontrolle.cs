@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Cubecontrolle : MonoBehaviour
 {
@@ -23,13 +25,17 @@ public class Cubecontrolle : MonoBehaviour
     //[Header("Audio")]
     //Audio
 
+    public GameObject targ;
     public float yRot;
     public float xRot;
+
+    public bool test;
     
     public void Start()
     {
         Gamemanager.God.CC = this;
     }
+    
     void Update()
     {
         if (Input.GetMouseButton(1))
@@ -53,7 +59,6 @@ public class Cubecontrolle : MonoBehaviour
                 xRot = -Input.GetAxis("Mouse X") * (-12 * 50) * Time.deltaTime;
             }
         }
-
         if (Input.GetKeyDown(KeyCode.G))
         {
             StartCoroutine(rand());
