@@ -19,6 +19,8 @@ public class Gamemanager : MonoBehaviour
         [Header("Lists")] 
         public List<BoxCollider> playerColliders;
         public List<BoxCollider> ControlColliders;
+
+        public Quaternion heldrotation;
         
     #endregion
     #region Static Class setup
@@ -40,6 +42,8 @@ public class Gamemanager : MonoBehaviour
     {
         if (GameState == State.playerControlled)
         {
+            God.CC.transform.localRotation = heldrotation;
+            God.CC.transform.rotation = Quaternion.Euler(0,0,0);
             GameState = State.cubeControlled;
             God.PC.playercontrol = false;
             foreach (BoxCollider collider in playerColliders)
@@ -53,6 +57,7 @@ public class Gamemanager : MonoBehaviour
         }
         else if (GameState == State.cubeControlled)
         {
+            God.CC.transform.rotation = heldrotation;
            GameState = State.playerControlled;
            God.PC.playercontrol = true;
            foreach (BoxCollider collider in playerColliders)

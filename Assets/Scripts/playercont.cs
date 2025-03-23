@@ -49,6 +49,7 @@ public class playercont : MonoBehaviour
             {
                 if (!wall)
                 {
+                    right=false;
                     anim.SetBool("walk", true);
                     RB.AddForce(transform.right * movespeed, ForceMode.Acceleration);
                 }
@@ -57,6 +58,7 @@ public class playercont : MonoBehaviour
             {
                 if (!wall)
                 {
+                    right=false;
                     anim.SetBool("walk", false);
                     RB.AddForce(transform.right * movespeed/5, ForceMode.Acceleration);
                 }
@@ -69,6 +71,7 @@ public class playercont : MonoBehaviour
             {
                 if (!wall)
                 {
+                    right=true;
                     anim.SetBool("walk", true);
                     RB.AddForce(transform.right * -movespeed, ForceMode.Force);
                 }
@@ -77,6 +80,7 @@ public class playercont : MonoBehaviour
             {
                 if (!wall)
                 {
+                    right=true;
                     anim.SetBool("walk", false);
                     RB.AddForce(transform.right * -movespeed/5, ForceMode.Force);
                 }
@@ -90,6 +94,15 @@ public class playercont : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.D))
         {
             anim.SetBool("walk", false);
+        }
+
+        if (right)
+        {
+            transform.localScale = new Vector3(-0.62877f, 0.62877f, 0.62877f);
+        }
+        else
+        {
+            transform.localScale = new Vector3(0.62877f, 0.62877f, 0.62877f);
         }
         anim.SetFloat("speed", Mathf.Abs(RB.velocity.magnitude/2));
         if (wall)
@@ -106,16 +119,19 @@ public class playercont : MonoBehaviour
             if (grounded)
             {
                 RB.AddForce(transform.up*jump,ForceMode.Impulse);
+                gravitymult = 1f;
             }
             if (wall)
             {
                 if (right)
                 {
-                    RB.AddForce(transform.right*-jump/1.5f, ForceMode.Impulse);
+                    RB.AddForce(transform.right*jump/1.5f, ForceMode.Impulse);
+                    gravitymult = 1f;
                 }
                 else
                 {
-                    RB.AddForce(transform.right*jump/1.5f, ForceMode.Impulse);
+                    RB.AddForce(transform.right*-jump/1.5f, ForceMode.Impulse);
+                    gravitymult = 1f;
                 }
                 RB.AddForce(transform.up*jump/4,ForceMode.Impulse);
             }
@@ -139,15 +155,19 @@ public class playercont : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(transform.position, -transform.right, out hit, transform.localScale.magnitude+0.01f))
             {
-                right = false;
-                wall = true;
-                grounded = false;
-            }
-            if (Physics.Raycast(transform.position, transform.right, out hit, transform.localScale.magnitude+0.01f))
-            { 
                 right = true;
                 wall = true;
                 grounded = false;
+                gravitymult = 0.5f;
+                anim.SetBool("wall", true);
+            }
+            if (Physics.Raycast(transform.position, transform.right, out hit, transform.localScale.magnitude+0.01f))
+            { 
+                right = false;
+                wall = true;
+                grounded = false;
+                gravitymult = 0.5f;
+                anim.SetBool("wall", true);
             }
             if (bcols.Length > 0)
             {
@@ -161,6 +181,8 @@ public class playercont : MonoBehaviour
         {
             wall = false;
             grounded = false;
+            gravitymult = 1f;
+            anim.SetBool("wall", false);
         }
     }
     
