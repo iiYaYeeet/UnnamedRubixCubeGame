@@ -241,7 +241,7 @@ public class Cubecontrolle : MonoBehaviour
                         yellowcore.transform.RotateAround(yellowcore.transform.position, Vector3.down, yRot);
                         yellowcore.transform.RotateAround(yellowcore.transform.position, Vector3.down, xRot);
                         
-                        float snappedValue = Mathf.Round(yellowcore.transform.localRotation.eulerAngles.y / 5) * 5;
+                        float snappedValue = Mathf.Round(yellowcore.transform.localRotation.eulerAngles.y /5) * 5;
                         yellowcore.transform.localRotation = Quaternion.Euler(0, snappedValue, 0);
                     }
 
@@ -297,6 +297,10 @@ public class Cubecontrolle : MonoBehaviour
 
     public IEnumerator rand()
     {
+        foreach (GameObject obj in everything)
+        {
+            obj.transform.SetParent(core.transform);
+        }
         int loops = Random.Range(10, 30);
         for (int i = 0; i < loops; i++)
         {
@@ -312,13 +316,19 @@ public class Cubecontrolle : MonoBehaviour
                 {
                     whitecore.transform.Rotate(0,90,0);
                     rotating.Clear();
-                    yield return new WaitForFixedUpdate();
+                    foreach (GameObject obj in everything)
+                    {
+                        obj.transform.SetParent(core.transform);
+                    }
                 }
                 else
                 {
                     whitecore.transform.Rotate(0,-90,0);
                     rotating.Clear();
-                    yield return new WaitForFixedUpdate();
+                    foreach (GameObject obj in everything)
+                    {
+                        obj.transform.SetParent(core.transform);
+                    }
                 }
                 yield return new WaitForFixedUpdate();
             }
@@ -333,13 +343,19 @@ public class Cubecontrolle : MonoBehaviour
                 {
                     redcore.transform.Rotate(0,0,90);
                     rotating.Clear();
-                    yield return new WaitForFixedUpdate();
+                    foreach (GameObject obj in everything)
+                    {
+                        obj.transform.SetParent(core.transform);
+                    }
                 }
                 else
                 {
                     redcore.transform.Rotate(0,0,-90);
                     rotating.Clear();
-                    yield return new WaitForFixedUpdate();
+                    foreach (GameObject obj in everything)
+                    {
+                        obj.transform.SetParent(core.transform);
+                    }
                 }
                 yield return new WaitForFixedUpdate();
             }
@@ -354,13 +370,19 @@ public class Cubecontrolle : MonoBehaviour
                 {
                     yellowcore.transform.Rotate(0,90,0);
                     rotating.Clear();
-                    yield return new WaitForFixedUpdate();
+                    foreach (GameObject obj in everything)
+                    {
+                        obj.transform.SetParent(core.transform);
+                    }
                 }
                 else
                 {
                     yellowcore.transform.Rotate(0,-90,0);
                     rotating.Clear();
-                    yield return new WaitForFixedUpdate();
+                    foreach (GameObject obj in everything)
+                    {
+                        obj.transform.SetParent(core.transform);
+                    }
                 }
                 yield return new WaitForFixedUpdate();
             }
@@ -375,13 +397,19 @@ public class Cubecontrolle : MonoBehaviour
                 {
                     greencore.transform.Rotate(90,0,0);
                     rotating.Clear();
-                    yield return new WaitForFixedUpdate();
+                    foreach (GameObject obj in everything)
+                    {
+                        obj.transform.SetParent(core.transform);
+                    }
                 }
                 else
                 {
                     greencore.transform.Rotate(-90,0,0);
                     rotating.Clear();
-                    yield return new WaitForFixedUpdate();
+                    foreach (GameObject obj in everything)
+                    {
+                        obj.transform.SetParent(core.transform);
+                    }
                 }
                 yield return new WaitForFixedUpdate();
             }
@@ -396,20 +424,63 @@ public class Cubecontrolle : MonoBehaviour
                 {
                     bluecore.transform.Rotate(90,0,0);
                     rotating.Clear();
-                    yield return new WaitForFixedUpdate();
+                    foreach (GameObject obj in everything)
+                    {
+                        obj.transform.SetParent(core.transform);
+                    }
                 }
                 else
                 {
                     bluecore.transform.Rotate(-90,0,0);
                     rotating.Clear();
-                    yield return new WaitForFixedUpdate();
+                    foreach (GameObject obj in everything)
+                    {
+                        obj.transform.SetParent(core.transform);
+                    }
                 }
                 yield return new WaitForFixedUpdate();
             }
+            if (random == 5)
+            {
+                checkcollision(orangeoverlap);
+                foreach (GameObject obj in rotating)
+                {
+                    obj.transform.SetParent(orangecore.transform);
+                }
+                if (Random.Range(0, 1) == 0)
+                {
+                    orangecore.transform.Rotate(0,0,90);
+                    rotating.Clear();
+                    foreach (GameObject obj in everything)
+                    {
+                        obj.transform.SetParent(core.transform);
+                    }
+                }
+                else
+                {
+                    orangecore.transform.Rotate(0,0,-90);
+                    rotating.Clear();
+                    foreach (GameObject obj in everything)
+                    {
+                        obj.transform.SetParent(core.transform);
+                    }
+                }
+                yield return new WaitForFixedUpdate();
+            }
+            yield return null;
+        }
+        foreach (GameObject obj in everything)
+        {
+            obj.transform.SetParent(core.transform);
         }
     }
     public void checkcollision(GameObject cr)
     {
+        rotating.Clear();
+        foreach (GameObject obj in everything)
+        {
+            obj.transform.SetParent(core.transform);
+        }
         Collider[] cols = Physics.OverlapBox(cr.transform.position, cr.transform.localScale, cr.transform.rotation);
         foreach (var col in cols)
         {

@@ -46,6 +46,8 @@ public class Gamemanager : MonoBehaviour
             God.CC.transform.rotation = Quaternion.Euler(0,0,0);
             GameState = State.cubeControlled;
             God.PC.playercontrol = false;
+            God.PC.gravitymult = 0;
+            God.PC.RB.constraints = RigidbodyConstraints.FreezeAll;
             foreach (BoxCollider collider in playerColliders)
             {
                 collider.enabled = false;
@@ -60,6 +62,9 @@ public class Gamemanager : MonoBehaviour
             God.CC.transform.rotation = heldrotation;
            GameState = State.playerControlled;
            God.PC.playercontrol = true;
+           God.PC.gravitymult = 1;
+           God.PC.RB.constraints = RigidbodyConstraints.None;
+           God.PC.RB.constraints = RigidbodyConstraints.FreezeRotation;
            foreach (BoxCollider collider in playerColliders)
            {
                collider.enabled = true;

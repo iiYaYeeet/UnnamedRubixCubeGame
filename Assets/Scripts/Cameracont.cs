@@ -127,7 +127,7 @@ public class Cameracont : MonoBehaviour
     {
         while (Vector3.Distance(transform.position, camtarget.position) > 0.05f)
         {
-            cam.transform.position=Vector3.Lerp(cam.transform.position,camtarget.transform.position,0.05f);
+            cam.transform.position=Vector3.Lerp(cam.transform.position,camtarget.transform.position,0.07f);
             transform.rotation = camtarget.transform.localRotation;
             cam.transform.LookAt(camtarget.transform.parent.position,transform.up);
             if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)

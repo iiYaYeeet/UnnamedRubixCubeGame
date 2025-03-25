@@ -42,6 +42,13 @@ public class playercont : MonoBehaviour
 
     public void Update()
     {
+        
+        
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            Gamemanager.God.GM.switchState();
+        }
+        
         #region Input
         if (Input.GetKey(KeyCode.D))
         {
@@ -197,6 +204,10 @@ public class playercont : MonoBehaviour
         {
             heldobj = other.gameObject;
             other.enabled=false;
+        }
+        if (other.gameObject.CompareTag("Portal"))
+        {
+            Gamemanager.God.GM.switchState();
         }
         if (other.gameObject.CompareTag("QuestNPC"))
         {

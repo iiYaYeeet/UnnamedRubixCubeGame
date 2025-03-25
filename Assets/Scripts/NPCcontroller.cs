@@ -26,6 +26,8 @@ public class NPCcontroller : MonoBehaviour
                     if (Gamemanager.God.PC.heldobj.name == "Gear")
                     {
                         Debug.Log("yippiee");
+                        StartCoroutine(Gamemanager.God.CC.rand());
+                        Gamemanager.God.GM.switchState();
                         tag = "Pickup";
                         Gamemanager.God.PC.heldobj = null;
                         Gamemanager.God.PC.interact = false;
