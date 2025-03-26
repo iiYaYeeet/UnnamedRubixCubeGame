@@ -44,7 +44,8 @@ public class NPCcontroller : MonoBehaviour
                         Debug.Log("yippiee");
                         Gamemanager.God.CaC.anim.enabled = true;
                         Gamemanager.God.CaC.anim.Play("Cutscene");
-                        //Gamemanager.God.GM.AS.PlayOneShot(Gamemanager.God.GM.cubeexit);
+                        Gamemanager.God.GM.AS.PlayOneShot(Gamemanager.God.GM.cubeexit);
+                        Gamemanager.God.PC.heldobj.SetActive(false);
                         Gamemanager.God.PC.heldobj = null;
                         Gamemanager.God.PC.interact = false;
                         anim.Play("happy");

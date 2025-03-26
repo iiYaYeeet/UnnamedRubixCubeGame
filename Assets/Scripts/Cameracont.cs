@@ -151,7 +151,6 @@ public class Cameracont : MonoBehaviour
     {
         Gamemanager.God.GM.switchState();
         anim.enabled = false;
-        camtarget.transform.position = new Vector3(113.6f, 41.6f, -59.8f);
         cam.transform.position = new Vector3(113.6f, 41.6f, -59.8f);
     }
 }

@@ -21,8 +21,9 @@ public class Gamemanager : MonoBehaviour
         public List<BoxCollider> ControlColliders;
 
         public Quaternion heldrotation;
-        
-        
+        public GameObject portal;
+        public List<GameObject> fakeportals;
+        public bool firstswitch;
         public AudioSource AS;
         public AudioClip Space;
         public AudioClip cubeexit;
@@ -47,6 +48,11 @@ public class Gamemanager : MonoBehaviour
     {
         if (GameState == State.playerControlled)
         {
+            if (!firstswitch)
+            {
+                portal.SetActive(true);
+                firstswitch = true;
+            }
             God.CC.transform.localRotation = heldrotation;
             God.CC.transform.rotation = Quaternion.Euler(0,0,0);
             GameState = State.cubeControlled;

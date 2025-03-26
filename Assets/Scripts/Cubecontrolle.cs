@@ -55,11 +55,6 @@ public class Cubecontrolle : MonoBehaviour
                 xRot = -Input.GetAxis("Mouse X") * (-12 * 50) * Time.deltaTime;
             }
         }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            StartCoroutine(rand());
-        }
-
         if (Input.GetMouseButtonUp(1))
         {
             float snappedValue = Mathf.Round(whitecore.transform.localRotation.eulerAngles.y / 90) * 90;

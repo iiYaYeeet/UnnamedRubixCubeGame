@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 47157994}
   m_Layer: 2
   m_Name: Green Middle Left
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1981,7 +1981,7 @@ GameObject:
   - component: {fileID: 111678851}
   m_Layer: 2
   m_Name: Green Middle Right
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2001,6 +2001,7 @@ Transform:
   m_Children:
   - {fileID: 246599637}
   - {fileID: 1674319964}
+  - {fileID: 994545701}
   m_Father: {fileID: 1803296349}
   m_LocalEulerAnglesHint: {x: -0.094, y: -0.117, z: 0.065}
 --- !u!23 &111678849
@@ -3074,7 +3075,7 @@ GameObject:
   - component: {fileID: 158185596}
   m_Layer: 2
   m_Name: Red Top Right
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3588,7 +3589,7 @@ GameObject:
   - component: {fileID: 175479145}
   m_Layer: 2
   m_Name: Green Middle Top
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3730,7 +3731,7 @@ GameObject:
   - component: {fileID: 190683259}
   m_Layer: 2
   m_Name: Red Top Middle
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9352,7 +9353,7 @@ GameObject:
   - component: {fileID: 228305678}
   m_Layer: 2
   m_Name: White Middle Left
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10844,7 +10845,7 @@ GameObject:
   - component: {fileID: 294592745}
   m_Layer: 2
   m_Name: Blue Middle Right
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11653,7 +11654,7 @@ GameObject:
   - component: {fileID: 316633176}
   m_Layer: 2
   m_Name: Yellow Bottom Middle
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12490,6 +12491,9 @@ MonoBehaviour:
   - {fileID: 1279815919}
   - {fileID: 425863428}
   heldrotation: {x: 0, y: 0, z: 0, w: 0}
+  portal: {fileID: 547571739}
+  fakeportals: []
+  firstswitch: 0
   AS: {fileID: 355165654}
   Space: {fileID: 8300000, guid: db368e10131b46240a3b8e22ceaec53d, type: 3}
   cubeexit: {fileID: 8300000, guid: af42205b816ab314593527a6c40e32d2, type: 3}
@@ -13104,7 +13108,7 @@ GameObject:
   - component: {fileID: 370518738}
   m_Layer: 2
   m_Name: Yellow Top Left
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16154,7 +16158,7 @@ GameObject:
   - component: {fileID: 483073367}
   m_Layer: 2
   m_Name: Yellow Center
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17404,7 +17408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &547571740
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -22952,7 +22956,7 @@ GameObject:
   - component: {fileID: 573874367}
   m_Layer: 2
   m_Name: Red Bottom Middle
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23165,7 +23169,7 @@ GameObject:
   - component: {fileID: 577465807}
   m_Layer: 2
   m_Name: Red Bottom Left
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23344,8 +23348,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.51321995, z: 1}
-  m_Center: {x: 1.0782567e-13, y: -0.24338819, z: -7.1563536e-12}
+  m_Size: {x: 1.1502723, y: 0.51321995, z: 1}
+  m_Center: {x: 0.0032226432, y: -0.24338813, z: -1.5986051e-11}
 --- !u!65 &595147563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23573,7 +23577,7 @@ GameObject:
   - component: {fileID: 600051610}
   m_Layer: 2
   m_Name: Yellow Bottom Right
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23867,7 +23871,7 @@ GameObject:
   - component: {fileID: 612566762}
   m_Layer: 2
   m_Name: Blue Middle Bottom
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23974,7 +23978,7 @@ GameObject:
   - component: {fileID: 612583028}
   m_Layer: 2
   m_Name: Orange Top Left
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30395,7 +30399,7 @@ GameObject:
   - component: {fileID: 688653299}
   m_Layer: 2
   m_Name: Blue Center
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30894,7 +30898,7 @@ GameObject:
   - component: {fileID: 703704706}
   m_Layer: 2
   m_Name: Green Top Right
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31726,7 +31730,7 @@ GameObject:
   - component: {fileID: 727710634}
   m_Layer: 2
   m_Name: Red Middle Left
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34510,7 +34514,7 @@ GameObject:
   - component: {fileID: 847681397}
   m_Layer: 2
   m_Name: Green Center
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35696,7 +35700,7 @@ GameObject:
   - component: {fileID: 905379609}
   m_Layer: 2
   m_Name: White Bottom RIght
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35834,7 +35838,7 @@ GameObject:
   - component: {fileID: 908437918}
   m_Layer: 2
   m_Name: Orange Bottom Middle
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37234,8 +37238,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.29762688, z: 1}
-  m_Center: {x: 3.150505e-12, y: 0.35118586, z: 1.06944115e-11}
+  m_Size: {x: 1.1559815, y: 0.29762703, z: 1}
+  m_Center: {x: 0.004293621, y: 0.35118222, z: 3.197569e-12}
 --- !u!212 &994545700
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37277,8 +37281,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.5471698, g: 0.51817876, b: 0.16415088, a: 1}
+  m_Sprite: {fileID: -563680265, guid: 34b434b761d8617468be4c475549f69d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -37296,13 +37300,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994545698}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00018141799, y: -0.7078287, z: 0.000983883, w: 0.70638347}
-  m_LocalPosition: {x: 31.8921, y: 6.3726, z: 19.9136}
-  m_LocalScale: {x: 8.162721, y: 0.8401107, z: 1.3679999}
+  m_LocalRotation: {x: 0.00000014854595, y: -0.70710737, z: 0.00000048428774, w: 0.7071063}
+  m_LocalPosition: {x: 0.9273183, y: -0.24000451, z: 0.00032214978}
+  m_LocalScale: {x: 0.35341126, y: 0.05343189, z: 0.68399996}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 591884442}
-  m_Father: {fileID: 0}
+  - {fileID: 1848481643}
+  m_Father: {fileID: 111678847}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &996370282
 GameObject:
@@ -38223,7 +38228,7 @@ GameObject:
   - component: {fileID: 1020030647}
   m_Layer: 2
   m_Name: Yellow Bottom Right
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38482,7 +38487,7 @@ GameObject:
   - component: {fileID: 1036681648}
   m_Layer: 2
   m_Name: Blue Bottom Right
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39350,7 +39355,7 @@ GameObject:
   - component: {fileID: 1066278880}
   m_Layer: 2
   m_Name: White Middle Top
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41007,7 +41012,7 @@ GameObject:
   - component: {fileID: 1149483359}
   m_Layer: 2
   m_Name: Green Bottom Right
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41135,7 +41140,7 @@ GameObject:
   - component: {fileID: 1152882468}
   m_Layer: 2
   m_Name: Yellow Middle Left
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42038,7 +42043,7 @@ GameObject:
   - component: {fileID: 1174645059}
   m_Layer: 2
   m_Name: Blue Middle Left
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43068,7 +43073,7 @@ GameObject:
   - component: {fileID: 1213652666}
   m_Layer: 2
   m_Name: Green Bottom Left
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44082,7 +44087,7 @@ GameObject:
   - component: {fileID: 1240619630}
   m_Layer: 2
   m_Name: White Bottom Middle
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44361,7 +44366,7 @@ GameObject:
   - component: {fileID: 1260688142}
   m_Layer: 2
   m_Name: Orange Bottom Left
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45557,7 +45562,7 @@ GameObject:
   - component: {fileID: 1294499372}
   m_Layer: 2
   m_Name: Green Top Left
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46115,7 +46120,7 @@ GameObject:
   - component: {fileID: 1324094932}
   m_Layer: 2
   m_Name: Blue Middle Top
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46496,7 +46501,7 @@ GameObject:
   - component: {fileID: 1331594703}
   m_Layer: 2
   m_Name: 'Red Top Left '
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47407,7 +47412,7 @@ GameObject:
   - component: {fileID: 1351655313}
   m_Layer: 2
   m_Name: Red Bottom Right
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47602,7 +47607,7 @@ GameObject:
   - component: {fileID: 1353163038}
   m_Layer: 2
   m_Name: White Middle Right
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48703,7 +48708,7 @@ GameObject:
   - component: {fileID: 1373123592}
   m_Layer: 2
   m_Name: Green Bottom Middle
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49084,7 +49089,7 @@ GameObject:
   - component: {fileID: 1381808201}
   m_Layer: 2
   m_Name: Orange Middle Right
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49683,7 +49688,7 @@ GameObject:
   - component: {fileID: 1409879608}
   m_Layer: 2
   m_Name: Red Center
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50422,7 +50427,7 @@ GameObject:
   - component: {fileID: 1429243610}
   m_Layer: 2
   m_Name: White Bottom Left
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50837,7 +50842,7 @@ GameObject:
   - component: {fileID: 1443541684}
   m_Layer: 2
   m_Name: Orange Middle Top
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51229,7 +51234,7 @@ GameObject:
   - component: {fileID: 1448930575}
   m_Layer: 2
   m_Name: Yellow Top Right
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51496,7 +51501,7 @@ GameObject:
   - component: {fileID: 1451766913}
   m_Layer: 2
   m_Name: Orange Middle Left
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53417,7 +53422,7 @@ GameObject:
   - component: {fileID: 1524795245}
   m_Layer: 2
   m_Name: White Center
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54827,7 +54832,7 @@ GameObject:
   - component: {fileID: 1573656388}
   m_Layer: 2
   m_Name: Yellow Middle Top
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56637,7 +56642,7 @@ GameObject:
   - component: {fileID: 1632019478}
   m_Layer: 2
   m_Name: Yellow Middle Right
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57551,7 +57556,7 @@ GameObject:
   - component: {fileID: 1673567474}
   m_Layer: 2
   m_Name: Orange Center
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58206,7 +58211,7 @@ GameObject:
   - component: {fileID: 1689051260}
   m_Layer: 2
   m_Name: White Bottom Left
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60189,7 +60194,7 @@ GameObject:
   - component: {fileID: 1741975566}
   m_Layer: 2
   m_Name: Red Middle Right
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62969,6 +62974,89 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842175414}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1848481642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1848481643}
+  - component: {fileID: 1848481645}
+  - component: {fileID: 1848481644}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1848481643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848481642}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.03585, y: -0, z: 0.6}
+  m_LocalScale: {x: 1.250983, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 994545701}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1848481644
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848481642}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a4b8fc481a1bce548ba4cf8eaf56ce83, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1848481645
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848481642}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1849409359
 GameObject:
   m_ObjectHideFlags: 0
@@ -65709,7 +65797,7 @@ GameObject:
   - component: {fileID: 1928571370}
   m_Layer: 2
   m_Name: Blue Top Right
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67161,7 +67249,7 @@ GameObject:
   - component: {fileID: 1976855049}
   m_Layer: 2
   m_Name: White Top Left
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67817,7 +67905,7 @@ GameObject:
   - component: {fileID: 2003611026}
   m_Layer: 2
   m_Name: Blue Bottom Left
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68451,7 +68539,7 @@ GameObject:
   - component: {fileID: 2034668912}
   m_Layer: 2
   m_Name: Orange Bottom Right
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68985,7 +69073,7 @@ GameObject:
   - component: {fileID: 2055322362}
   m_Layer: 2
   m_Name: Blue Top Left
-  m_TagString: Untagged
+  m_TagString: Camtarg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71436,5 +71524,4 @@ SceneRoots:
   - {fileID: 355165653}
   - {fileID: 1920967347}
   - {fileID: 225306466}
-  - {fileID: 994545701}
   - {fileID: 547571744}

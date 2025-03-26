@@ -9,6 +9,7 @@ TagManager:
   - Pickup
   - QuestNPC
   - Portal
+  - Camtarg
   layers:
   - Default
   - TransparentFX

@@ -46,11 +46,24 @@ public class playercont : MonoBehaviour
 
     public void Update()
     {
-        
-        
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
         {
-            Gamemanager.God.GM.switchState();
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                transform.position = Gamemanager.God.GM.portal.transform.position;
+                Gamemanager.God.GM.switchState();
+                if (right)
+                {
+                    RB.AddForce(transform.right*jump/2, ForceMode.Impulse);
+                    gravitymult = 1f;
+                }
+                else
+                {
+                    RB.AddForce(transform.right*-jump/2, ForceMode.Impulse);
+                    gravitymult = 1f;
+                }
+                RB.AddForce(transform.up*jump/4,ForceMode.Impulse);
+            }
         }
         
         #region Input
@@ -210,7 +223,10 @@ public class playercont : MonoBehaviour
     {
         if (playercontrol)
         {
-            Playercammovement(other.gameObject);
+            if (other.CompareTag("Camtarg"))
+            {
+                Playercammovement(other.gameObject);
+            }
         }
 
         if (other.gameObject.CompareTag("Pickup"))
