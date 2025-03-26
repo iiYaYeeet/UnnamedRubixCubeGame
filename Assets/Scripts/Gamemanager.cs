@@ -22,6 +22,11 @@ public class Gamemanager : MonoBehaviour
 
         public Quaternion heldrotation;
         
+        
+        public AudioSource AS;
+        public AudioClip Space;
+        public AudioClip cubeexit;
+        
     #endregion
     #region Static Class setup
     public static class God
@@ -48,6 +53,7 @@ public class Gamemanager : MonoBehaviour
             God.PC.playercontrol = false;
             God.PC.gravitymult = 0;
             God.PC.RB.constraints = RigidbodyConstraints.FreezeAll;
+            God.PC.SR.enabled = false;
             foreach (BoxCollider collider in playerColliders)
             {
                 collider.enabled = false;
@@ -65,6 +71,7 @@ public class Gamemanager : MonoBehaviour
            God.PC.gravitymult = 1;
            God.PC.RB.constraints = RigidbodyConstraints.None;
            God.PC.RB.constraints = RigidbodyConstraints.FreezeRotation;
+           God.PC.SR.enabled = true;
            foreach (BoxCollider collider in playerColliders)
            {
                collider.enabled = true;

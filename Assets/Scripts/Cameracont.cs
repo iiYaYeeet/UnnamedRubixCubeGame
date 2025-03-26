@@ -12,6 +12,7 @@ public class Cameracont : MonoBehaviour
     [Header("Components")]
     public Camera cam;
     public Rigidbody RB;
+    public Animator anim;
     [Header("Objects")]
     [Tooltip("Target for the camera to start at")]public Transform camtarget;
     [Tooltip("Center of the cube")]public GameObject cubecenter;
@@ -138,5 +139,19 @@ public class Cameracont : MonoBehaviour
         }
         Debug.Log("cleared");
         transform.rotation = camtarget.transform.localRotation;
+    }
+
+    public void randomizecube()
+    {
+        StartCoroutine(Gamemanager.God.CC.rand());
+        Gamemanager.God.GM.AS.Play();
+    }
+
+    public void endcutscene()
+    {
+        Gamemanager.God.GM.switchState();
+        anim.enabled = false;
+        camtarget.transform.position = new Vector3(113.6f, 41.6f, -59.8f);
+        cam.transform.position = new Vector3(113.6f, 41.6f, -59.8f);
     }
 }

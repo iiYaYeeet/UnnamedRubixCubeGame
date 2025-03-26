@@ -16,20 +16,16 @@ public class Cubecontrolle : MonoBehaviour
     [Header("Lists")]
     [Tooltip("Currently rotating objects")]public List<GameObject> rotating;
     public List<GameObject> everything;
+    public GameObject targ;
     [Header("Ints")]
     [Tooltip("Side to rotate")]public int control;
     [Header("Components")]
     public Animator anim;
-    //[Header("Floats")]
-    //Floats
-    //[Header("Audio")]
-    //Audio
-
-    public GameObject targ;
+    [Header("Floats")]
     public float yRot;
     public float xRot;
-
-    public bool test;
+    //[Header("Audio")]
+    //Audio
     
     public void Start()
     {
@@ -66,12 +62,25 @@ public class Cubecontrolle : MonoBehaviour
 
         if (Input.GetMouseButtonUp(1))
         {
-            foreach (GameObject obj in everything)
-            {
-                obj.transform.SetParent(core.transform);
-            }
+            float snappedValue = Mathf.Round(whitecore.transform.localRotation.eulerAngles.y / 90) * 90;
+            whitecore.transform.localRotation = Quaternion.Euler(0, snappedValue, 0);
+            
+            snappedValue = Mathf.Round(redcore.transform.localRotation.eulerAngles.z / 90) * 90;
+            redcore.transform.localRotation = Quaternion.Euler(0, 0, snappedValue);
+            
+            snappedValue = Mathf.Round(bluecore.transform.localRotation.eulerAngles.x / 90) * 90;
+            bluecore.transform.localRotation = Quaternion.Euler(snappedValue, 0, 0);
+            
+            snappedValue = Mathf.Round(orangecore.transform.localRotation.eulerAngles.z / 90) * 90;
+            orangecore.transform.localRotation = Quaternion.Euler(0, 0,snappedValue); 
+            
+            snappedValue = Mathf.Round(yellowcore.transform.localRotation.eulerAngles.y / 90) * 90;
+            yellowcore.transform.localRotation = Quaternion.Euler(0, snappedValue, 0);
+            
+            snappedValue = Mathf.Round(greencore.transform.localRotation.eulerAngles.x / 90) * 90;
+            greencore.transform.localRotation = Quaternion.Euler(snappedValue, 0, 0);
+            
         }
-
         switch (control)
         {
             case 0:
@@ -80,11 +89,6 @@ public class Cubecontrolle : MonoBehaviour
 
                 if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
                 {
-                    foreach (GameObject obj in rotating)
-                    {
-                        obj.transform.SetParent(whitecore.transform);
-                    }
-                    
                     if (Input.GetMouseButtonDown(1))
                     {
                         float snappedValue = Mathf.Round(whitecore.transform.localRotation.eulerAngles.y / 90) * 90;
@@ -93,9 +97,12 @@ public class Cubecontrolle : MonoBehaviour
                     
                     if (Input.GetMouseButton(1))
                     {
+                        foreach (GameObject obj in rotating)
+                        {
+                            obj.transform.SetParent(whitecore.transform);
+                        }
                         whitecore.transform.RotateAround(whitecore.transform.position, Vector3.up, yRot);
                         whitecore.transform.RotateAround(whitecore.transform.position, Vector3.up, xRot);
-                        
                         float snappedValue = Mathf.Round(whitecore.transform.localRotation.eulerAngles.y / 5) * 5;
                         whitecore.transform.localRotation = Quaternion.Euler(0, snappedValue, 0);
                     }
@@ -104,6 +111,10 @@ public class Cubecontrolle : MonoBehaviour
                     {
                         float snappedValue = Mathf.Round(whitecore.transform.localRotation.eulerAngles.y / 90) * 90;
                         whitecore.transform.localRotation = Quaternion.Euler(0, snappedValue, 0);
+                        foreach (GameObject obj in everything)
+                        {
+                            obj.transform.SetParent(core.transform);
+                        }
                     }
                 }
 
@@ -117,11 +128,6 @@ public class Cubecontrolle : MonoBehaviour
 
                 if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
                 {
-                    foreach (GameObject obj in rotating)
-                    {
-                        obj.transform.SetParent(redcore.transform);
-                    }
-
                     if (Input.GetMouseButtonDown(1))
                     {
                         float snappedValue = Mathf.Round(redcore.transform.localRotation.eulerAngles.z / 90) * 90;
@@ -130,9 +136,12 @@ public class Cubecontrolle : MonoBehaviour
                     
                     if (Input.GetMouseButton(1))
                     {
+                        foreach (GameObject obj in rotating)
+                        {
+                            obj.transform.SetParent(redcore.transform);
+                        }
                         redcore.transform.RotateAround(redcore.transform.position, Vector3.forward, yRot);
                         redcore.transform.RotateAround(redcore.transform.position, Vector3.forward, xRot);
-                        
                         float snappedValue = Mathf.Round(redcore.transform.localRotation.eulerAngles.z / 5) * 5;
                         redcore.transform.localRotation = Quaternion.Euler(0, 0, snappedValue);
                     }
@@ -141,6 +150,10 @@ public class Cubecontrolle : MonoBehaviour
                     {
                         float snappedValue = Mathf.Round(redcore.transform.localRotation.eulerAngles.z / 90) * 90;
                         redcore.transform.localRotation = Quaternion.Euler(0, 0, snappedValue);
+                        foreach (GameObject obj in everything)
+                        {
+                            obj.transform.SetParent(core.transform);
+                        }
                     }
                 }
                 break;
@@ -153,10 +166,6 @@ public class Cubecontrolle : MonoBehaviour
 
                 if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
                 {
-                    foreach (GameObject obj in rotating)
-                    {
-                        obj.transform.SetParent(bluecore.transform);
-                    }
                     
                     if (Input.GetMouseButtonDown(1))
                     {
@@ -166,9 +175,12 @@ public class Cubecontrolle : MonoBehaviour
 
                     if (Input.GetMouseButton(1))
                     {
+                        foreach (GameObject obj in rotating)
+                        {
+                            obj.transform.SetParent(bluecore.transform);
+                        }
                         bluecore.transform.RotateAround(bluecore.transform.position, Vector3.left, yRot);
                         bluecore.transform.RotateAround(bluecore.transform.position, Vector3.left, xRot);
-                        
                         float snappedValue = Mathf.Round(bluecore.transform.localRotation.eulerAngles.x / 5) * 5;
                         bluecore.transform.localRotation = Quaternion.Euler(snappedValue, 0, 0);
                     }
@@ -177,6 +189,10 @@ public class Cubecontrolle : MonoBehaviour
                     {
                         float snappedValue = Mathf.Round(bluecore.transform.localRotation.eulerAngles.x / 90) * 90;
                         bluecore.transform.localRotation = Quaternion.Euler(snappedValue, 0, 0);
+                        foreach (GameObject obj in everything)
+                        {
+                            obj.transform.SetParent(core.transform);
+                        }
                     }
                 }
                 break;
@@ -189,11 +205,6 @@ public class Cubecontrolle : MonoBehaviour
 
                 if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
                 {
-                    foreach (GameObject obj in rotating)
-                    {
-                        obj.transform.SetParent(orangecore.transform);
-                    }
-
                     if (Input.GetMouseButtonDown(1))
                     {
                         float snappedValue = Mathf.Round(orangecore.transform.localRotation.eulerAngles.z / 90) * 90;
@@ -202,9 +213,12 @@ public class Cubecontrolle : MonoBehaviour
                     
                     if (Input.GetMouseButton(1))
                     {
+                        foreach (GameObject obj in rotating)
+                        {
+                            obj.transform.SetParent(orangecore.transform);
+                        }
                         orangecore.transform.RotateAround(orangecore.transform.position, Vector3.back, yRot);
                         orangecore.transform.RotateAround(orangecore.transform.position, Vector3.back, xRot);
-                        
                         float snappedValue = Mathf.Round(orangecore.transform.localRotation.eulerAngles.z / 5) * 5;
                         orangecore.transform.localRotation = Quaternion.Euler(0, 0,snappedValue); 
                     }
@@ -212,7 +226,11 @@ public class Cubecontrolle : MonoBehaviour
                     if (Input.GetMouseButtonUp(1))
                     {
                         float snappedValue = Mathf.Round(orangecore.transform.localRotation.eulerAngles.z / 90) * 90;
-                        orangecore.transform.localRotation = Quaternion.Euler(0, 0,snappedValue); 
+                        orangecore.transform.localRotation = Quaternion.Euler(0, 0,snappedValue);
+                        foreach (GameObject obj in everything)
+                        {
+                            obj.transform.SetParent(core.transform);
+                        } 
                     }
                 }
                 break;
@@ -225,11 +243,6 @@ public class Cubecontrolle : MonoBehaviour
 
                 if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
                 {
-                    foreach (GameObject obj in rotating)
-                    {
-                        obj.transform.SetParent(yellowcore.transform);
-                    }
-
                     if (Input.GetMouseButtonDown(1))
                     {
                         float snappedValue = Mathf.Round(yellowcore.transform.localRotation.eulerAngles.y / 90) * 90;
@@ -238,9 +251,12 @@ public class Cubecontrolle : MonoBehaviour
                     
                     if (Input.GetMouseButton(1))
                     {
+                        foreach (GameObject obj in rotating)
+                        {
+                            obj.transform.SetParent(yellowcore.transform);
+                        }
                         yellowcore.transform.RotateAround(yellowcore.transform.position, Vector3.down, yRot);
                         yellowcore.transform.RotateAround(yellowcore.transform.position, Vector3.down, xRot);
-                        
                         float snappedValue = Mathf.Round(yellowcore.transform.localRotation.eulerAngles.y /5) * 5;
                         yellowcore.transform.localRotation = Quaternion.Euler(0, snappedValue, 0);
                     }
@@ -249,6 +265,10 @@ public class Cubecontrolle : MonoBehaviour
                     {
                         float snappedValue = Mathf.Round(yellowcore.transform.localRotation.eulerAngles.y / 90) * 90;
                         yellowcore.transform.localRotation = Quaternion.Euler(0, snappedValue, 0);
+                        foreach (GameObject obj in everything)
+                        {
+                            obj.transform.SetParent(core.transform);
+                        }
                     }
                 }
 
@@ -262,11 +282,6 @@ public class Cubecontrolle : MonoBehaviour
 
                 if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
                 {
-                    foreach (GameObject obj in rotating)
-                    {
-                        obj.transform.SetParent(greencore.transform);
-                    }
-                    
                     if (Input.GetMouseButtonDown(1))
                     {
                         float snappedValue = Mathf.Round(greencore.transform.localRotation.eulerAngles.x / 90) * 90;
@@ -275,9 +290,12 @@ public class Cubecontrolle : MonoBehaviour
                     
                     if (Input.GetMouseButton(1))
                     {
+                        foreach (GameObject obj in rotating)
+                        {
+                            obj.transform.SetParent(greencore.transform);
+                        }
                         greencore.transform.RotateAround(greencore.transform.position, Vector3.right, yRot);
                         greencore.transform.RotateAround(greencore.transform.position, Vector3.right, xRot);
-                        
                         float snappedValue = Mathf.Round(greencore.transform.localRotation.eulerAngles.x / 5) * 5;
                         greencore.transform.localRotation = Quaternion.Euler(snappedValue, 0, 0);
                     }
@@ -286,6 +304,10 @@ public class Cubecontrolle : MonoBehaviour
                     {
                         float snappedValue = Mathf.Round(greencore.transform.localRotation.eulerAngles.x / 90) * 90;
                         greencore.transform.localRotation = Quaternion.Euler(snappedValue, 0, 0);
+                        foreach (GameObject obj in everything)
+                        {
+                            obj.transform.SetParent(core.transform);
+                        }
                     }
                 }
                 break;

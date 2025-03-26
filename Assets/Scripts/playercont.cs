@@ -7,6 +7,7 @@ public class playercont : MonoBehaviour
 {
     [Header("Components")]
     public Rigidbody RB;
+    public SpriteRenderer SR;
     public Animator anim;
     //[Header("Ints")]
     //Ints
@@ -28,8 +29,11 @@ public class playercont : MonoBehaviour
     [Tooltip("Target for the camera to start at")]public Transform camtarget;
     [Tooltip("Bottom overlapbox for player")]public GameObject bottomcol;
     public GameObject heldobj;
-    //[Header("Audio")]
-    //Audio
+    [Header("Audio")] 
+    public AudioSource AS;
+    public AudioClip Jump;
+    public AudioClip Pickup;
+    public AudioClip Give;
     public void Start()
     {
         Gamemanager.God.PC = this;
@@ -127,6 +131,7 @@ public class playercont : MonoBehaviour
             {
                 RB.AddForce(transform.up*jump,ForceMode.Impulse);
                 gravitymult = 1f;
+                AS.PlayOneShot(Jump);
             }
             if (wall)
             {
@@ -134,11 +139,13 @@ public class playercont : MonoBehaviour
                 {
                     RB.AddForce(transform.right*jump/1.5f, ForceMode.Impulse);
                     gravitymult = 1f;
+                    AS.PlayOneShot(Jump);
                 }
                 else
                 {
                     RB.AddForce(transform.right*-jump/1.5f, ForceMode.Impulse);
                     gravitymult = 1f;
+                    AS.PlayOneShot(Jump);
                 }
                 RB.AddForce(transform.up*jump/4,ForceMode.Impulse);
             }
@@ -147,7 +154,13 @@ public class playercont : MonoBehaviour
 
         if (heldobj != null)
         {
+            heldobj.transform.rotation = transform.rotation;
             heldobj.transform.position = Vector3.MoveTowards(heldobj.transform.position, transform.position, 0.01f*Vector3.Distance(transform.position, heldobj.transform.position));
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && interact)
+        {
+            AS.PlayOneShot(Give);
         }
         #region Physics calcs
         //w
@@ -202,6 +215,7 @@ public class playercont : MonoBehaviour
 
         if (other.gameObject.CompareTag("Pickup"))
         {
+            AS.PlayOneShot(Pickup);
             heldobj = other.gameObject;
             other.enabled=false;
         }
