@@ -11577,6 +11577,7 @@ MonoBehaviour:
   orangeoverlap: {fileID: 1649635153}
   yellowoverlap: {fileID: 979259577}
   greenoverlap: {fileID: 793961317}
+  targ: {fileID: 0}
   rotating: []
   everything:
   - {fileID: 991119458}
@@ -11599,11 +11600,11 @@ MonoBehaviour:
   - {fileID: 806278990}
   - {fileID: 1983883267}
   - {fileID: 378631443}
-  targ: {fileID: 0}
   control: 0
   anim: {fileID: 0}
   yRot: 0
   xRot: 0
+  cooled: 1
 --- !u!4 &315000923
 Transform:
   m_ObjectHideFlags: 0
