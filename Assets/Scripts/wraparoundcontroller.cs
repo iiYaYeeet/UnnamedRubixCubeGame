@@ -30,14 +30,18 @@ public class wraparoundcontroller : MonoBehaviour
         {
             var vector3 = Gamemanager.God.PC.transform.position;
             Collider[] cols = Physics.OverlapBox(colcheck.transform.position, colcheck.transform.localScale, colcheck.transform.rotation);
-            Debug.Log(cols);
-            if (cols.Length < 2)
+            Debug.Log(cols.Length);
+            foreach (Collider C in cols)
+            {
+                Debug.Log(C.gameObject.name);
+            }
+            if (cols.Length < 3)
             {
                 if (Rotationdir == Direction.Up)
                 {
                     Debug.Log("uprot");
                     Gamemanager.God.CC.transform.Rotate(0, 0, -90,Space.World);
-                    Gamemanager.God.PC.RB.AddForce(transform.up * 15, ForceMode.Impulse);
+                    Gamemanager.God.PC.RB.AddForce(transform.up * 6, ForceMode.Impulse);
                     vector3.y = playertarget.position.y;
                 }
 

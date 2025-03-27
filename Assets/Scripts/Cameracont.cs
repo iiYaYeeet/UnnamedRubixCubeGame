@@ -16,6 +16,7 @@ public class Cameracont : MonoBehaviour
     [Header("Objects")]
     [Tooltip("Target for the camera to start at")]public Transform camtarget;
     [Tooltip("Center of the cube")]public GameObject cubecenter;
+    public GameObject wateroverlay;
     #endregion
     
     public void Start()
@@ -122,6 +123,8 @@ public class Cameracont : MonoBehaviour
             //state change
             //Gamemanager.God.GM.switchState();
         }
+        
+        wateroverlay.transform.Rotate(0.1f,0,0);
     }
 
     public IEnumerator cameramove()

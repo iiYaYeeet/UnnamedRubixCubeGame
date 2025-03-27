@@ -25,6 +25,7 @@ public class Cubecontrolle : MonoBehaviour
     [Header("Floats")]
     public float yRot;
     public float xRot;
+    public float rotationsens;
     [Header("Bools")]
     public bool cooled;
     //[Header("Audio")]
@@ -37,25 +38,26 @@ public class Cubecontrolle : MonoBehaviour
     
     void Update()
     {
+        
         if (Input.GetMouseButton(1))
         {
             if (Input.mousePosition.x < Screen.width / 2)
             {
                 
-                yRot = -Input.GetAxis("Mouse Y") * (-12 * 50) * Time.deltaTime;
+                yRot = -Input.GetAxis("Mouse Y") * (-12 * rotationsens) * Time.deltaTime;
             }
             else
             {
-                yRot = Input.GetAxis("Mouse Y") * (-12 * 50) * Time.deltaTime;
+                yRot = Input.GetAxis("Mouse Y") * (-12 * rotationsens) * Time.deltaTime;
             }
 
             if (Input.mousePosition.y < Screen.height / 2)
             {
-                xRot = Input.GetAxis("Mouse X") * (-12 * 50) * Time.deltaTime;
+                xRot = Input.GetAxis("Mouse X") * (-12 * rotationsens) * Time.deltaTime;
             }
             else
             {
-                xRot = -Input.GetAxis("Mouse X") * (-12 * 50) * Time.deltaTime;
+                xRot = -Input.GetAxis("Mouse X") * (-12 * rotationsens) * Time.deltaTime;
             }
         }
         if (Input.GetMouseButtonUp(1))

@@ -9,21 +9,19 @@ public class playercont : MonoBehaviour
     public Rigidbody RB;
     public SpriteRenderer SR;
     public Animator anim;
-    //[Header("Ints")]
-    //Ints
     [Header("Bools")]
     public bool playercontrol;
     public bool grounded;
     public bool wall;
     public bool right;
     public bool interact;
+    public bool moving;
+    public bool jumping;
     [Header("Floats")]
     [Tooltip("Max player move speed")]public float maxspeed;
     [Tooltip("Player speed applied every frame")]public float movespeed;
     [Tooltip("Jump force applied")]public float jump;
     public float gravitymult;
-    //[Header("Lists")]
-    //lists
     [Header("Objects")]
     [Tooltip("Current face player is on")]public GameObject currentbox;
     [Tooltip("Target for the camera to start at")]public Transform camtarget;
@@ -41,11 +39,67 @@ public class playercont : MonoBehaviour
 
     public void FixedUpdate()
     {
+        #region Physics calcs
+        //Gravity
         RB.AddForce(Physics.gravity * gravitymult, ForceMode.Acceleration);
+
+        #region Movement
+
+        if (grounded&&!wall&&moving)
+        {
+            if (right)
+            {
+                RB.AddForce(transform.right * -movespeed, ForceMode.Acceleration);
+            }
+            else
+            {
+                RB.AddForce(transform.right * movespeed, ForceMode.Acceleration);
+            }
+        }
+        else if (!wall&&moving)
+        {
+            if (right)
+            {
+                RB.AddForce(transform.right * -movespeed/5, ForceMode.Acceleration);
+            }
+            else
+            {
+                RB.AddForce(transform.right * movespeed/5, ForceMode.Acceleration);
+            }
+        }
+        #endregion
+
+        #region Jump
+
+        if (jumping)
+        {
+            if (grounded)
+            {
+                RB.AddForce(transform.up * jump, ForceMode.Impulse);
+            }
+
+            if (wall)
+            {
+                if (right)
+                {
+                    RB.AddForce(transform.right * jump / 1.5f, ForceMode.Impulse);
+                }
+                else
+                {
+                    RB.AddForce(transform.right * -jump / 1.5f, ForceMode.Impulse);
+                }
+
+                RB.AddForce(transform.up * jump / 4, ForceMode.Impulse);
+            }
+        }
+
+        #endregion
+        #endregion
     }
 
     public void Update()
     {
+        #region cubeexit
         if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
         {
             if (Input.GetKeyDown(KeyCode.E))
@@ -65,8 +119,9 @@ public class playercont : MonoBehaviour
                 RB.AddForce(transform.up*jump/4,ForceMode.Impulse);
             }
         }
-        
+        #endregion
         #region Input
+        #region a/d movement
         if (Input.GetKey(KeyCode.D))
         {
             if (grounded)
@@ -74,8 +129,8 @@ public class playercont : MonoBehaviour
                 if (!wall)
                 {
                     right=false;
+                    moving = true;
                     anim.SetBool("walk", true);
-                    RB.AddForce(transform.right * movespeed, ForceMode.Acceleration);
                 }
             }
             else
@@ -83,8 +138,8 @@ public class playercont : MonoBehaviour
                 if (!wall)
                 {
                     right=false;
+                    moving = true;
                     anim.SetBool("walk", false);
-                    RB.AddForce(transform.right * movespeed/5, ForceMode.Acceleration);
                 }
             }
         }
@@ -96,8 +151,8 @@ public class playercont : MonoBehaviour
                 if (!wall)
                 {
                     right=true;
+                    moving = true;
                     anim.SetBool("walk", true);
-                    RB.AddForce(transform.right * -movespeed, ForceMode.Force);
                 }
             }
             else
@@ -105,21 +160,24 @@ public class playercont : MonoBehaviour
                 if (!wall)
                 {
                     right=true;
+                    moving = true;
                     anim.SetBool("walk", false);
-                    RB.AddForce(transform.right * -movespeed/5, ForceMode.Force);
                 }
             }
         }
 
         if (Input.GetKeyUp(KeyCode.A))
         {
+            moving = false;
             anim.SetBool("walk", false);
         }
         if (Input.GetKeyUp(KeyCode.D))
         {
+            moving = false;
             anim.SetBool("walk", false);
         }
-
+        #endregion
+        #region Left/Right flip
         if (right)
         {
             transform.localScale = new Vector3(-0.62877f, 0.62877f, 0.62877f);
@@ -128,7 +186,11 @@ public class playercont : MonoBehaviour
         {
             transform.localScale = new Vector3(0.62877f, 0.62877f, 0.62877f);
         }
+        #endregion
+        
+        #region speed/wall alts
         anim.SetFloat("speed", Mathf.Abs(RB.velocity.magnitude/2));
+        
         if (wall)
         {
             RB.drag = 1;
@@ -137,12 +199,13 @@ public class playercont : MonoBehaviour
         {
             RB.drag = 0.5f;
         }
-        
+        #endregion
+        #region jump
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            jumping = true;
             if (grounded)
             {
-                RB.AddForce(transform.up*jump,ForceMode.Impulse);
                 gravitymult = 1f;
                 AS.PlayOneShot(Jump);
             }
@@ -150,21 +213,26 @@ public class playercont : MonoBehaviour
             {
                 if (right)
                 {
-                    RB.AddForce(transform.right*jump/1.5f, ForceMode.Impulse);
                     gravitymult = 1f;
                     AS.PlayOneShot(Jump);
                 }
                 else
                 {
-                    RB.AddForce(transform.right*-jump/1.5f, ForceMode.Impulse);
                     gravitymult = 1f;
                     AS.PlayOneShot(Jump);
                 }
                 RB.AddForce(transform.up*jump/4,ForceMode.Impulse);
             }
         }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            jumping = false;
+        }
+        #endregion
         #endregion
 
+        #region Object Manipulation
         if (heldobj != null)
         {
             heldobj.transform.rotation = transform.rotation;
@@ -175,11 +243,10 @@ public class playercont : MonoBehaviour
         {
             AS.PlayOneShot(Give);
         }
-        #region Physics calcs
-        //w
         #endregion
     }
 
+    #region collisons
     public void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.CompareTag("Floor"))
@@ -253,6 +320,7 @@ public class playercont : MonoBehaviour
         }
     }
 
+    #endregion
     public void Playercammovement(GameObject curbox)
     {
         currentbox = curbox.gameObject;
