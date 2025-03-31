@@ -16,9 +16,30 @@ public class NPCcontroller : MonoBehaviour
     }
     public Animator anim;
     [SerializeField] public NPC type = NPC.Robot;
+    public bool happy;
+    public TMPro.TMP_Text text;
+    public Canvas textbox;
+    public string normaldialouge;
+    public string happydialouge;
 
     public void Update()
     {
+        if (Gamemanager.God.PC.interact)
+        {
+            textbox.enabled = true;
+            if (!happy)
+            {
+                text.text = normaldialouge;
+            }
+            else
+            {
+                text.text = happydialouge;
+            }
+        }
+        else
+        {
+            textbox.enabled = false;
+        }
         switch (type)
         {
             case NPC.Robot:
@@ -30,6 +51,7 @@ public class NPCcontroller : MonoBehaviour
                         StartCoroutine(Gamemanager.God.CC.rand());
                         Gamemanager.God.GM.switchState();
                         tag = "Pickup";
+                        happy = true;
                         Gamemanager.God.PC.heldobj = null;
                         Gamemanager.God.PC.interact = false;
                         anim.Play("happy");
@@ -46,6 +68,7 @@ public class NPCcontroller : MonoBehaviour
                         Gamemanager.God.CaC.anim.Play("Cutscene");
                         Gamemanager.God.GM.AS.PlayOneShot(Gamemanager.God.GM.cubeexit);
                         Gamemanager.God.PC.heldobj.SetActive(false);
+                        happy = true;
                         Gamemanager.God.PC.heldobj = null;
                         Gamemanager.God.PC.interact = false;
                         anim.Play("happy");
@@ -60,6 +83,7 @@ public class NPCcontroller : MonoBehaviour
                         Debug.Log("yippiee");
                         StartCoroutine(Gamemanager.God.CC.rand());
                         Gamemanager.God.GM.switchState();
+                        happy = true;
                         Gamemanager.God.PC.heldobj = null;
                         Gamemanager.God.PC.interact = false;
                         anim.Play("happy");
@@ -74,6 +98,7 @@ public class NPCcontroller : MonoBehaviour
                         Debug.Log("yippiee");
                         StartCoroutine(Gamemanager.God.CC.rand());
                         Gamemanager.God.GM.switchState();
+                        happy = true;
                         Gamemanager.God.PC.heldobj = null;
                         Gamemanager.God.PC.interact = false;
                         anim.Play("happy");
@@ -88,6 +113,7 @@ public class NPCcontroller : MonoBehaviour
                         Debug.Log("yippiee");
                         StartCoroutine(Gamemanager.God.CC.rand());
                         Gamemanager.God.GM.switchState();
+                        happy = true;
                         Gamemanager.God.PC.heldobj = null;
                         Gamemanager.God.PC.interact = false;
                         anim.Play("happy");

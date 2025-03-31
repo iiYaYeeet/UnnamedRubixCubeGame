@@ -28,8 +28,9 @@ public class Cubecontrolle : MonoBehaviour
     public float rotationsens;
     [Header("Bools")]
     public bool cooled;
-    //[Header("Audio")]
-    //Audio
+    [Header("Audio")] 
+    public AudioSource AS;
+    public AudioClip snap;
     
     public void Start()
     {
@@ -122,7 +123,8 @@ public class Cubecontrolle : MonoBehaviour
                             {
                                 obj.transform.SetParent(core.transform);
                             }
-
+                            AS.Stop();
+                            AS.PlayOneShot(snap);
                             cooled = false;
                             StartCoroutine(cd());
                         }
@@ -170,6 +172,8 @@ public class Cubecontrolle : MonoBehaviour
                                 obj.transform.SetParent(core.transform);
                             }
 
+                            AS.Stop();
+                            AS.PlayOneShot(snap);
                             cooled = false;
                             StartCoroutine(cd());
                         }
@@ -217,6 +221,8 @@ public class Cubecontrolle : MonoBehaviour
                             obj.transform.SetParent(core.transform);
                         }
 
+                        AS.Stop();
+                        AS.PlayOneShot(snap);
                         cooled = false;
                         StartCoroutine(cd());
                     }
@@ -225,7 +231,7 @@ public class Cubecontrolle : MonoBehaviour
 
                 #endregion
 
-                case 3:
+            case 3:
 
                 #region Orange face rotation
 
@@ -275,56 +281,56 @@ public class Cubecontrolle : MonoBehaviour
 
                 break;
 
-                        #endregion
+                #endregion
 
-                        case 4:
+            case 4:
 
-                        #region Yellow face rotation
+                #region Yellow face rotation
 
                         if (Gamemanager.God.GM.GameState == Gamemanager.State.cubeControlled)
+                {
+                                
+                    if (Input.GetMouseButtonDown(1))
+                    {
+                        float snappedValue = Mathf.Round(yellowcore.transform.localRotation.eulerAngles.y / 90) * 90;
+                        yellowcore.transform.localRotation = Quaternion.Euler(0, snappedValue, 0);
+                    }
+
+                    if (cooled)
+                    {
+                        if (Input.GetMouseButton(1))
                         {
-                            
-                                if (Input.GetMouseButtonDown(1))
-                                {
-                                    float snappedValue = Mathf.Round(yellowcore.transform.localRotation.eulerAngles.y / 90) * 90;
-                                    yellowcore.transform.localRotation = Quaternion.Euler(0, snappedValue, 0);
-                                }
-
-                                if (cooled)
-                                {
-                                    if (Input.GetMouseButton(1))
-                                    {
-                                        foreach (GameObject obj in rotating)
-                                        {
-                                            obj.transform.SetParent(yellowcore.transform);
-                                        }
-
-                                        yellowcore.transform.RotateAround(yellowcore.transform.position, Vector3.down,
-                                            yRot);
-                                        yellowcore.transform.RotateAround(yellowcore.transform.position, Vector3.down,
-                                            xRot);
-                                        float snappedValue =
-                                            Mathf.Round(yellowcore.transform.localRotation.eulerAngles.y / 5) * 5;
-                                        yellowcore.transform.localRotation = Quaternion.Euler(0, snappedValue, 0);
-                                    }
-                                }
-
-                                if (Input.GetMouseButtonUp(1))
-                                {
-                                    float snappedValue = Mathf.Round(yellowcore.transform.localRotation.eulerAngles.y / 90) * 90;
-                                    yellowcore.transform.localRotation = Quaternion.Euler(0, snappedValue, 0);
-                                    foreach (GameObject obj in everything)
-                                    {
-                                        obj.transform.SetParent(core.transform);
-                                    }
-                                    cooled = false;
-                                    StartCoroutine(cd());
-                                }
+                            foreach (GameObject obj in rotating)
+                            {
+                                obj.transform.SetParent(yellowcore.transform);
                             }
-                        
 
-                        break;
+                            yellowcore.transform.RotateAround(yellowcore.transform.position, Vector3.down,
+                                yRot);
+                            yellowcore.transform.RotateAround(yellowcore.transform.position, Vector3.down,
+                                xRot);
+                            float snappedValue =
+                                Mathf.Round(yellowcore.transform.localRotation.eulerAngles.y / 5) * 5;
+                            yellowcore.transform.localRotation = Quaternion.Euler(0, snappedValue, 0);
+                        }
+                    }
 
+                    if (Input.GetMouseButtonUp(1))
+                    {
+                        float snappedValue = Mathf.Round(yellowcore.transform.localRotation.eulerAngles.y / 90) * 90;
+                        yellowcore.transform.localRotation = Quaternion.Euler(0, snappedValue, 0);
+                        foreach (GameObject obj in everything)
+                        {
+                            obj.transform.SetParent(core.transform);
+                        }
+                                        
+                        AS.Stop();
+                        AS.PlayOneShot(snap);
+                        cooled = false;
+                        StartCoroutine(cd());
+                    }
+                } 
+                break;
             #endregion
 
             case 5:
@@ -364,6 +370,9 @@ public class Cubecontrolle : MonoBehaviour
                         {
                             obj.transform.SetParent(core.transform);
                         }
+                        
+                        AS.Stop();
+                        AS.PlayOneShot(snap);
                         cooled = false;
                         StartCoroutine(cd());
                     }

@@ -53,7 +53,8 @@ public class Gamemanager : MonoBehaviour
                 portal.SetActive(true);
                 firstswitch = true;
             }
-            God.CC.transform.localRotation = heldrotation;
+
+            heldrotation = God.CC.transform.rotation;
             God.CC.transform.rotation = Quaternion.Euler(0,0,0);
             GameState = State.cubeControlled;
             God.PC.playercontrol = false;
@@ -70,7 +71,7 @@ public class Gamemanager : MonoBehaviour
             }
         }
         else if (GameState == State.cubeControlled)
-        {
+        { 
             God.CC.transform.rotation = heldrotation;
            GameState = State.playerControlled;
            God.PC.playercontrol = true;

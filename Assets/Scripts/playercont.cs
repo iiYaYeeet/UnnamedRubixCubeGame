@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class playercont : MonoBehaviour
@@ -17,10 +18,13 @@ public class playercont : MonoBehaviour
     public bool interact;
     public bool moving;
     public bool jumping;
+    public bool poisoned;
+    public bool water;
     [Header("Floats")]
     [Tooltip("Max player move speed")]public float maxspeed;
     [Tooltip("Player speed applied every frame")]public float movespeed;
     [Tooltip("Jump force applied")]public float jump;
+    public float timer;
     public float gravitymult;
     [Header("Objects")]
     [Tooltip("Current face player is on")]public GameObject currentbox;
@@ -94,6 +98,9 @@ public class playercont : MonoBehaviour
         }
 
         #endregion
+
+        transform.position = new Vector3(31.7f, transform.position.y, transform.position.z);
+
         #endregion
     }
 
@@ -244,6 +251,21 @@ public class playercont : MonoBehaviour
             AS.PlayOneShot(Give);
         }
         #endregion
+
+        #region poison
+
+        if (poisoned)
+        {
+            timer -= Time.deltaTime;
+            if (timer < 0)
+            {
+                transform.position = Gamemanager.God.GM.portal.transform.position;
+                poisoned = false;
+                timer = 5;
+            }
+        }
+
+        #endregion
     }
 
     #region collisons
@@ -258,7 +280,14 @@ public class playercont : MonoBehaviour
                 right = true;
                 wall = true;
                 grounded = false;
-                gravitymult = 0.5f;
+                if (water)
+                {
+                    gravitymult = 0.1f;
+                }
+                else
+                {
+                    gravitymult = 0.5f;
+                }
                 anim.SetBool("wall", true);
             }
             if (Physics.Raycast(transform.position, transform.right, out hit, transform.localScale.magnitude+0.01f))
@@ -266,7 +295,14 @@ public class playercont : MonoBehaviour
                 right = false;
                 wall = true;
                 grounded = false;
-                gravitymult = 0.5f;
+                if (water)
+                {
+                    gravitymult = 0.1f;
+                }
+                else
+                {
+                    gravitymult = 0.5f;
+                }
                 anim.SetBool("wall", true);
             }
             if (bcols.Length > 0)
@@ -279,9 +315,16 @@ public class playercont : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
+            if (water)
+            {
+                gravitymult = 0.25f;
+            }
+            else
+            {
+                gravitymult = 1f;
+            }
             wall = false;
             grounded = false;
-            gravitymult = 1f;
             anim.SetBool("wall", false);
         }
     }
@@ -324,6 +367,31 @@ public class playercont : MonoBehaviour
     public void Playercammovement(GameObject curbox)
     {
         currentbox = curbox.gameObject;
+        if (!curbox.name.Contains("Yellow"))
+        {
+            poisoned = false;
+            timer = 5;
+            SR.color=Color.white;
+        }
+        else
+        {
+            SR.color=Color.magenta;
+        }
+        if (curbox.name.Contains("Blue"))
+        {
+            Gamemanager.God.CaC.wateroverlay.SetActive(true);
+            gravitymult = 0.25f;
+            jump = 4;
+            movespeed = 6;
+            water = true;
+        }
+        else
+        {
+            gravitymult = 1;
+            jump = 6;
+            movespeed = 10;
+            water = false;
+        }
         Gamemanager.God.CaC.camtarget = currentbox.transform.Find("Target");
         Gamemanager.God.CaC.StartCoroutine(nameof(Cameracont.cameramove));
     }
