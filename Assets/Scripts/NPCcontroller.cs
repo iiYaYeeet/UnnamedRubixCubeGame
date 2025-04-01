@@ -19,8 +19,8 @@ public class NPCcontroller : MonoBehaviour
     public bool happy;
     public TMPro.TMP_Text text;
     public Canvas textbox;
-    public string normaldialouge;
-    public string happydialouge;
+    [TextArea]public string normaldialouge;
+    [TextArea]public string happydialouge;
 
     public void Update()
     {

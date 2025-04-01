@@ -99,7 +99,7 @@ public class playercont : MonoBehaviour
 
         #endregion
 
-        transform.position = new Vector3(31.7f, transform.position.y, transform.position.z);
+        transform.position = new Vector3(32, transform.position.y, transform.position.z);
 
         #endregion
     }
@@ -242,7 +242,7 @@ public class playercont : MonoBehaviour
         #region Object Manipulation
         if (heldobj != null)
         {
-            heldobj.transform.rotation = transform.rotation;
+            heldobj.transform.localRotation = transform.localRotation;
             heldobj.transform.position = Vector3.MoveTowards(heldobj.transform.position, transform.position, 0.01f*Vector3.Distance(transform.position, heldobj.transform.position));
         }
 
@@ -263,6 +263,15 @@ public class playercont : MonoBehaviour
                 poisoned = false;
                 timer = 5;
             }
+        }
+
+        #endregion
+
+        #region Reset
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            transform.position = Gamemanager.God.GM.portal.transform.position;
         }
 
         #endregion
@@ -387,6 +396,7 @@ public class playercont : MonoBehaviour
         }
         else
         {
+            Gamemanager.God.CaC.wateroverlay.SetActive(false);
             gravitymult = 1;
             jump = 6;
             movespeed = 10;
