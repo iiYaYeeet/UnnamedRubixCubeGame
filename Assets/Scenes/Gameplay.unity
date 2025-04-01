@@ -4292,6 +4292,15 @@ PrefabInstance:
       propertyPath: type
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2305013678181906648, guid: 375fbf3d5c437494dad4b19a38ed09a9, type: 3}
+      propertyPath: happydialouge
+      value: You found it! Now I'm fixed. Could you now take me to my mechanic friend?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305013678181906648, guid: 375fbf3d5c437494dad4b19a38ed09a9, type: 3}
+      propertyPath: normaldialouge
+      value: I would love to leave this frozen place, but I lost my gear. Do you
+        mind finding it for me?
+      objectReference: {fileID: 0}
     - target: {fileID: 3651495818968577231, guid: 375fbf3d5c437494dad4b19a38ed09a9, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -58180,6 +58189,15 @@ PrefabInstance:
       propertyPath: type
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2305013678181906648, guid: 375fbf3d5c437494dad4b19a38ed09a9, type: 3}
+      propertyPath: happydialouge
+      value: We made up! Thank you! Now we can upgrade her circuits.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305013678181906648, guid: 375fbf3d5c437494dad4b19a38ed09a9, type: 3}
+      propertyPath: normaldialouge
+      value: I was working on upgrades for my friend, Axelle, but I had an arguement
+        with her! Could you find her so we can make up?
+      objectReference: {fileID: 0}
     - target: {fileID: 3651495818968577231, guid: 375fbf3d5c437494dad4b19a38ed09a9, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -62676,6 +62694,16 @@ PrefabInstance:
     - target: {fileID: 2305013678181906648, guid: 375fbf3d5c437494dad4b19a38ed09a9, type: 3}
       propertyPath: type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305013678181906648, guid: 375fbf3d5c437494dad4b19a38ed09a9, type: 3}
+      propertyPath: happydialouge
+      value: Oh holy leader... You have returned... Now we must show those that don't
+        believe... that the world is spherical... Want to join...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305013678181906648, guid: 375fbf3d5c437494dad4b19a38ed09a9, type: 3}
+      propertyPath: normaldialouge
+      value: Hello... We are looking... for our goat... It is needed for our... meeting.
+        Find it.
       objectReference: {fileID: 0}
     - target: {fileID: 3651495818968577231, guid: 375fbf3d5c437494dad4b19a38ed09a9, type: 3}
       propertyPath: m_Sprite
@@ -79736,6 +79764,15 @@ PrefabInstance:
     - target: {fileID: 2305013678181906648, guid: 375fbf3d5c437494dad4b19a38ed09a9, type: 3}
       propertyPath: type
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305013678181906648, guid: 375fbf3d5c437494dad4b19a38ed09a9, type: 3}
+      propertyPath: happydialouge
+      value: You found them! Thank you! Now we can play amazing music!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305013678181906648, guid: 375fbf3d5c437494dad4b19a38ed09a9, type: 3}
+      propertyPath: normaldialouge
+      value: I'm so sad... I wanna play music, but I lost my maracas... Please find
+        it sir?
       objectReference: {fileID: 0}
     - target: {fileID: 3651495818968577231, guid: 375fbf3d5c437494dad4b19a38ed09a9, type: 3}
       propertyPath: m_Sprite
@@ -103252,6 +103289,16 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 1639322313}
+    - target: {fileID: 2305013678181906648, guid: 375fbf3d5c437494dad4b19a38ed09a9, type: 3}
+      propertyPath: happydialouge
+      value: YAY! Now I can celebrate my birthday! You're a good helper maybe you
+        can help the rest of my friends on the other parts of the planet!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305013678181906648, guid: 375fbf3d5c437494dad4b19a38ed09a9, type: 3}
+      propertyPath: normaldialouge
+      value: Hi there! Are you new? Doesn't matter. I need my cake I left it somewhere
+        up high...
+      objectReference: {fileID: 0}
     - target: {fileID: 4857862880858117482, guid: 375fbf3d5c437494dad4b19a38ed09a9, type: 3}
       propertyPath: m_Controller
       value: 
