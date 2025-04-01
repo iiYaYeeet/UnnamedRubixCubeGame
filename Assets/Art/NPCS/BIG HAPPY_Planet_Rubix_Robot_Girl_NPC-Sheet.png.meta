@@ -108,18 +108,106 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BIG HAPPY_Planet_Rubix_Robot_Girl_NPC-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 245
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc9f310d8c1ca147ac71103a4cbe799
+      internalID: -1509539946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BIG HAPPY_Planet_Rubix_Robot_Girl_NPC-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 0
+        width: 245
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a3a394ef0c00040b82974f176cf5ec
+      internalID: 1356182948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BIG HAPPY_Planet_Rubix_Robot_Girl_NPC-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 0
+        width: 245
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fada2f5f19fa68f4ba956a3452c30fbb
+      internalID: -1222391864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BIG HAPPY_Planet_Rubix_Robot_Girl_NPC-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 0
+        width: 245
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80925eff626f354e8f2c61e027158bf
+      internalID: 1826376827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6ed2698206281c44d95b8da099bedd23
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BIG HAPPY_Planet_Rubix_Robot_Girl_NPC-Sheet_0: -1509539946
+      BIG HAPPY_Planet_Rubix_Robot_Girl_NPC-Sheet_1: 1356182948
+      BIG HAPPY_Planet_Rubix_Robot_Girl_NPC-Sheet_2: -1222391864
+      BIG HAPPY_Planet_Rubix_Robot_Girl_NPC-Sheet_3: 1826376827
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

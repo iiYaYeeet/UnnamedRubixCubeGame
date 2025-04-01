@@ -23,6 +23,7 @@ public class Gamemanager : MonoBehaviour
         public Quaternion heldrotation;
         public GameObject portal;
         public List<GameObject> fakeportals;
+        public List<Collider> borders;
         public bool firstswitch;
         public AudioSource AS;
         public AudioClip Space;
@@ -52,6 +53,10 @@ public class Gamemanager : MonoBehaviour
             {
                 portal.SetActive(true);
                 firstswitch = true;
+                foreach (Collider c in borders)
+                {
+                    c.isTrigger = true;
+                }
             }
 
             heldrotation = God.CC.transform.rotation;

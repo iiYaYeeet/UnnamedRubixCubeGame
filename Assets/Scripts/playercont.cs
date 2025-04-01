@@ -35,6 +35,8 @@ public class playercont : MonoBehaviour
     public AudioSource AS;
     public AudioClip Jump;
     public AudioClip Pickup;
+    public AudioClip goat;
+    public AudioClip maracas;
     public AudioClip Give;
     public void Start()
     {
@@ -242,10 +244,10 @@ public class playercont : MonoBehaviour
         #region Object Manipulation
         if (heldobj != null)
         {
-            heldobj.transform.localRotation = transform.localRotation;
+            heldobj.transform.rotation = transform.localRotation;
             heldobj.transform.position = Vector3.MoveTowards(heldobj.transform.position, transform.position, 0.01f*Vector3.Distance(transform.position, heldobj.transform.position));
         }
-
+        
         if (Input.GetKeyDown(KeyCode.E) && interact)
         {
             AS.PlayOneShot(Give);
@@ -350,7 +352,18 @@ public class playercont : MonoBehaviour
 
         if (other.gameObject.CompareTag("Pickup"))
         {
-            AS.PlayOneShot(Pickup);
+            if (other.gameObject.name == "Goat")
+            {
+                AS.PlayOneShot(goat);
+            }
+            else if (other.gameObject.name == "Maracas")
+            {
+                AS.PlayOneShot(maracas);
+            }
+            else
+            {
+                AS.PlayOneShot(Pickup);
+            }
             heldobj = other.gameObject;
             other.enabled=false;
         }
